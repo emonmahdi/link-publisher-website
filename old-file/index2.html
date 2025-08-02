@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Link Publisher </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+    <style>
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1020;
+        }
+
+        .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+            display: flex !important;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu {
+            margin-top: 0.5rem;
+            border-radius: 0.5rem;
+            border: none;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            display: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            padding: 1rem;
+            width: 600px;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .dropdown-menu .mega-item {
+            flex: 0 0 45%;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .dropdown-menu .mega-item i {
+            color: #ff5e14;
+            font-size: 1.2rem;
+        }
+
+        .dropdown-menu .mega-item h6 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .dropdown-menu .mega-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .btn-orange {
+            background-color: #ff5e14;
+            color: #fff;
+        }
+
+        .btn-orange:hover {
+            background-color: #e6520f;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .hero-section .highlight {
+            color: #ff5e14;
+        }
+
+        .hero-section p {
+            color: #6c757d;
+        }
+
+        .btn-group-custom .btn {
+            margin-right: 10px;
+        }
+
+        .trusted-by img {
+            height: 30px;
+            margin: 0 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-nav">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/logo.png" alt="Link Publishers" height="35">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button">
+                                Services
+                            </a>
+                            <div class="dropdown-menu">
+                                <div class="mega-item">
+                                    <i class="fas fa-link"></i>
+                                    <div>
+                                        <h6>Link Building</h6>
+                                        <p>Improve rankings with high-authority backlinks.</p>
+                                    </div>
+                                </div>
+                                <div class="mega-item">
+                                    <i class="fas fa-edit"></i>
+                                    <div>
+                                        <h6>Guest Posting</h6>
+                                        <p>Build backlinks and traffic with quality content on relevant sites.</p>
+                                    </div>
+                                </div>
+                                <div class="mega-item">
+                                    <i class="fas fa-bullhorn"></i>
+                                    <div>
+                                        <h6>Digital PR <span class="badge bg-danger">New</span></h6>
+                                        <p>Gain exposure with media coverage and top-tier backlinks.</p>
+                                    </div>
+                                </div>
+                                <div class="mega-item">
+                                    <i class="fas fa-magic"></i>
+                                    <div>
+                                        <h6>Niche Edits <span class="badge bg-danger">New</span></h6>
+                                        <p>Enhance SEO with link placements on authority content.</p>
+                                    </div>
+                                </div>
+                                <div class="mega-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <h6>SEO Reseller</h6>
+                                        <p>Offer SEO services without hiring an in-house team.</p>
+                                    </div>
+                                </div>
+                                <div class="mega-item">
+                                    <i class="fas fa-file-alt"></i>
+                                    <div>
+                                        <h6>Content Writing</h6>
+                                        <p>Boost visibility with expert-written web content, blogs, and more.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button">
+                                Tools
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">AI Tools</a></li>
+                                <li><a class="dropdown-item" href="#">SEO Audit</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" role="button">
+                                Company
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">About Us</a></li>
+                                <li><a class="dropdown-item" href="#">Careers</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button">
+                                Resources
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Blog</a></li>
+                                <li><a class="dropdown-item" href="#">Case Studies</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="ms-3 d-flex align-items-center">
+                        <a href="#" class="btn btn-outline-secondary me-2">My Dashboard</a>
+                        <a href="#" class="btn btn-orange">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero-section">
+            <div class="container">
+                <div class="alert alert-light border rounded-pill d-inline-block px-4 py-2 mb-4">
+                    <strong>⚠️ Meet Us At brightonSEO San Diego!</strong>
+                </div>
+                <h1>First <span class="highlight">AI-Driven</span> Guest Post & Link Building Platform</h1>
+                <p class="my-3">The future of link building is here. Say goodbye to manual outreach. Reach a wider
+                    audience and build authority with AI-suggested guest blogging on high-DA websites.</p>
+                <h5 class="fw-bold my-4">Looking for the best link-building platform? Join Link Publishers today!</h5>
+                <div class="btn-group-custom mb-3">
+                    <a href="#" class="btn btn-orange">Buy Guest Post</a>
+                    <a href="#" class="btn btn-outline-secondary">Sell Guest Post</a>
+                </div>
+                <div class="mb-3">
+                    <span class="text-muted small">Live link or money back/replacement guarantee</span>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mb-3">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle" width="40"
+                        height="40">
+                    <img src="https://randomuser.me/api/portraits/women/47.jpg" class="rounded-circle" width="40"
+                        height="40">
+                    <img src="https://randomuser.me/api/portraits/men/40.jpg" class="rounded-circle" width="40"
+                        height="40">
+                    <span class="ms-2 small">Loved by 6,000+ customers</span>
+                </div>
+                <div class="trusted-by">
+                    <p class="text-muted">We are Integrated with</p>
+                    <div>
+                        <img src="https://cdn.ahrefs.com/images/site-logo.svg" alt="ahrefs">
+                        <img src="https://seeklogo.com/images/S/semrush-logo-D61F7F39B7-seeklogo.com.png" alt="semrush">
+                        <img src="https://www.vectorlogo.zone/logos/moz/moz-ar21.svg" alt="moz">
+                        <img src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg"
+                            alt="google analytics">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+</body>
+
+</html>

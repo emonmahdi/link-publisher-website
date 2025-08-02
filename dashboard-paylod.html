@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dashboard | Link Publisher </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar p-3" id="sidebar">
+            <h4 class="logo-text mb-4"> <a href="index.html"><i class="fas fa-paper-plane me-2"></i>Link Publishers</a>
+            </h4>
+            <div class="text-center mb-4">
+                <div class="rounded-circle-amount">$0</div>
+                <p class="mb-0 mt-2 fw-bold">Balance</p>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                <a class="nav-link" href="dashboard-my-website.html"><i class="fas fa-globe me-2"></i> My
+                    Websites</a>
+                <a class="nav-link" href="dashboard-my-orders.html"><i class="fas fa-shopping-cart me-2"></i> My
+                    Orders</a>
+                <a class="nav-link active" href="dashboard-paylod.html"><i class="fas fa-wallet me-2"></i> Payouts</a>
+                <a class="nav-link" href="dashboard-affiliate-program.html"><i class="fas fa-handshake me-2"></i>
+                    Affiliate Program</a>
+                <a class="nav-link" href="dashboard-free-seo.html"><i class="fas fa-tools me-2"></i> Free SEO Tools
+                    <span class="badge bg-warning text-dark">New</span></a>
+                <a class="nav-link" href="dashboard-seo-service.html"><i class="fas fa-search-dollar me-2"></i> SEO
+                    Services</a>
+            </nav>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="content w-100">
+            <div class="header">
+                <div class="d-flex align-items-center">
+                    <button class="menu-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h5 class="mb-0 d-none d-md-block">Dashboard</h5>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle fs-4 me-2"></i>
+                        <strong>MD EMON HOWLADER</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item" href="dashboard-profile-page.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="register.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- body content -->
+            <div class="container mt-4 mb-5 dashboard-payload-content">
+                <!-- Banner -->
+                <div class="alert-banner">
+                    <strong>Tax information needed</strong> – For payment processing, please fill it out.
+                </div>
+
+                <!-- Payout Header -->
+                <div class="card p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="input-group" style="max-width: 400px;">
+                            <input type="email" class="form-control" placeholder="paypal@name.com">
+                            <button class="btn btn-withdraw text-white" type="button">WITHDRAW</button>
+                        </div>
+                        <button class="btn btn-faq-modal" data-bs-toggle="modal"
+                            data-bs-target="#faqModal">FAQs</button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content shadow-lg">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="faqModalLabel">Frequently Asked Questions</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Accordion -->
+                                    <div class="accordion" id="faqAccordion">
+
+                                        <!-- FAQ 1 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faq1-heading">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                                    What are the website requirements?
+                                                </button>
+                                            </h2>
+                                            <div id="faq1" class="accordion-collapse collapse show"
+                                                aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    Websites must have at least 250 monthly visitors and a DA/DR score
+                                                    of 15 or more. PBNs are not allowed.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 2 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faq2-heading">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faq2"
+                                                    aria-expanded="false" aria-controls="faq2">
+                                                    How long does verification take?
+                                                </button>
+                                            </h2>
+                                            <div id="faq2" class="accordion-collapse collapse"
+                                                aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    Verification typically takes 24–48 hours after website submission,
+                                                    depending on traffic and domain metrics.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 3 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faq3-heading">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faq3"
+                                                    aria-expanded="false" aria-controls="faq3">
+                                                    Can I change my pricing later?
+                                                </button>
+                                            </h2>
+                                            <div id="faq3" class="accordion-collapse collapse"
+                                                aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    Yes, pricing can be updated anytime from your dashboard under the
+                                                    “Website Details” section.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- FAQ 4 -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faq4-heading">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faq4"
+                                                    aria-expanded="false" aria-controls="faq4">
+                                                    What happens if I submit a low-quality site?
+                                                </button>
+                                            </h2>
+                                            <div id="faq4" class="accordion-collapse collapse"
+                                                aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
+                                                <div class="accordion-body">
+                                                    Submitting low-quality or spammy sites may lead to rejection or a
+                                                    permanent account ban, especially if they’re PBNs.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <small class="text-muted">Note: All withdrawal requests will be paid in your respective PayPal
+                        account on the 15th and the 28th of each month.</small>
+
+                    <!-- Nav Tabs -->
+                    <ul class="nav nav-tabs mt-4" id="payoutTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="balance-tab" data-bs-toggle="tab"
+                                data-bs-target="#balance" type="button" role="tab">Balance</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="withdrawn-tab" data-bs-toggle="tab" data-bs-target="#withdrawn"
+                                type="button" role="tab">Withdrawn</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tax-tab" data-bs-toggle="tab" data-bs-target="#tax"
+                                type="button" role="tab">Tax Information</button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab Contents -->
+                    <div class="tab-content">
+
+                        <!-- Balance Tab -->
+                        <div class="tab-pane fade show active card-table" id="balance" role="tabpanel">
+                            <h5 class="mb-3">Your Current Balances</h5>
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025-07-01</td>
+                                        <td>Service Payment</td>
+                                        <td>$250.00</td>
+                                        <td><span class="badge bg-success">Available</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-07-15</td>
+                                        <td>Referral Bonus</td>
+                                        <td>$50.00</td>
+                                        <td><span class="badge bg-success">Available</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Withdrawn Tab -->
+                        <div class="tab-pane fade card-table" id="withdrawn" role="tabpanel">
+                            <h5 class="mb-3">Withdrawal History</h5>
+                            <table class="table table-hover table-striped">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Transaction ID</th>
+                                        <th>Method</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2025-07-15</td>
+                                        <td>#TXN987654</td>
+                                        <td>PayPal</td>
+                                        <td>$200.00</td>
+                                        <td><span class="badge bg-secondary">Processed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2025-06-28</td>
+                                        <td>#TXN123456</td>
+                                        <td>PayPal</td>
+                                        <td>$150.00</td>
+                                        <td><span class="badge bg-secondary">Processed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Tax Information Tab -->
+                        <div class="tab-pane fade form-section" id="tax" role="tabpanel">
+                            <form id="taxForm">
+                                <div class="mb-4">
+                                    <label class="form-label d-block">Select Your Role<span
+                                            class="text-danger">*</span></label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="role" id="individual"
+                                            value="individual" checked>
+                                        <label class="form-check-label" for="individual">Individual</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="role" id="business"
+                                            value="business">
+                                        <label class="form-check-label" for="business">Business</label>
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">First Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Last Name<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Email<span class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" value="test@gmail.com" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Phone<span class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" value="123456789" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Address<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label class="form-label">Country<span class="text-danger">*</span></label>
+                                        <select class="form-select" required>
+                                            <option value="">Select Country</option>
+                                            <option value="USA">United States</option>
+                                            <option value="UK">United Kingdom</option>
+                                            <option value="IN">India</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 mb-3">
+                                        <label class="form-label">Zip<span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <!-- File Upload -->
+                                <div class="mb-4">
+                                    <label class="form-label">Document Submission<span
+                                            class="text-danger">*</span></label>
+                                    <p class="text-muted small">Upload photo ID (.pdf, .jpg, .png, .docx) – Max 1 file
+                                    </p>
+                                    <div class="file-drop-area" onclick="document.getElementById('fileInput').click()">
+                                        Drop files here or <span class="text-primary">Browse</span>
+                                        <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png,.webp,.doc,.docx"
+                                            class="d-none">
+                                    </div>
+                                </div>
+
+                                <div class="text-end">
+                                    <button type="submit" class="btn submit-btn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        }
+    </script>
+    <script>
+        // File upload feedback
+        document.getElementById('fileInput').addEventListener('change', function () {
+            const area = document.querySelector('.file-drop-area');
+            if (this.files.length > 0) {
+                area.textContent = `File Selected: ${this.files[0].name}`;
+            }
+        });
+
+        // Tax form handler
+        document.getElementById('taxForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Tax Information submitted successfully!');
+        });
+    </script>
+</body>
+
+</html>

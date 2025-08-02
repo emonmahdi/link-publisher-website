@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dashboard | Link Publisher </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar p-3" id="sidebar">
+            <h4 class="logo-text mb-4"> <a href="index.html"><i class="fas fa-paper-plane me-2"></i>Link Publishers</a>
+            </h4>
+            <div class="text-center mb-4">
+                <div class="rounded-circle-amount">$0</div>
+                <p class="mb-0 mt-2 fw-bold">Balance</p>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                <a class="nav-link active" href="dashboard-my-website.html"><i class="fas fa-globe me-2"></i> My
+                    Websites</a>
+                <a class="nav-link" href="dashboard-my-orders.html"><i class="fas fa-shopping-cart me-2"></i> My
+                    Orders</a>
+                <a class="nav-link" href="dashboard-paylod.html"><i class="fas fa-wallet me-2"></i> Payouts</a>
+                <a class="nav-link" href="dashboard-affiliate-program.html"><i class="fas fa-handshake me-2"></i>
+                    Affiliate Program</a>
+                <a class="nav-link" href="dashboard-free-seo.html"><i class="fas fa-tools me-2"></i> Free SEO Tools
+                    <span class="badge bg-warning text-dark">New</span></a>
+                <a class="nav-link" href="dashboard-seo-service.html"><i class="fas fa-search-dollar me-2"></i> SEO
+                    Services</a>
+            </nav>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="content w-100">
+            <div class="header">
+                <div class="d-flex align-items-center">
+                    <button class="menu-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h5 class="mb-0 d-none d-md-block">Dashboard</h5>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle fs-4 me-2"></i>
+                        <strong>MD EMON HOWLADER</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item" href="dashboard-profile-page.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="register.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- <div class="container-fluid mt-3">
+                <div class="alert alert-success">
+                    Tax information needed - <a href="#" class="alert-link">Click here</a> to complete your profile to
+                    withdraw funds.
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card-box bg-info">
+                            <div>Total Websites</div>
+                            <div class="fs-2">0</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-box bg-warning">
+                            <div>Total Orders</div>
+                            <div class="fs-2">0</div>
+                            <small>0 Completed Orders | 0 Pending Orders</small>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card-box bg-primary">
+                            <div>Total Sales</div>
+                            <div class="fs-2">$0</div>
+                            <small>$0 Amount Withdrawn</small>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Body Content Start -->
+            <div class="container mt-4 dashboard-add-new-form">
+                <!-- Navigation Path -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb small">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Website</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add New</li>
+                    </ol>
+                </nav>
+
+                <!-- Tax Notice -->
+                <div class="alert alert-success d-flex justify-content-between align-items-center">
+                    <span>Tax information needed <a href="#" class="text-primary text-decoration-underline small">Click
+                            here</a> </span>
+
+                </div>
+
+                <!-- Step Indicator -->
+                <div class="step-indicator my-3">
+                    <h5 class="card-title mb-4" style="color:#f4601d"> <span style="color:#000"> 1. </span>Add Website
+                    </h5>
+                    <!-- <span>2</span> Verification &nbsp; › &nbsp; -->
+                    <!-- <span>3</span> Add Details -->
+                </div>
+
+                <!-- Form Card -->
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title mb-3">Add Website</h5> -->
+
+                        <div class="alert-box">
+                            Make sure that any website you add to the platform has
+                            <strong>at least 250 monthly visitors and a DA and DR of at least 15.</strong>
+                            Add websites that don’t meet these requirements and
+                            <strong>include PBN websites may result in an account ban.</strong>
+                        </div>
+
+                        <!-- Website Input -->
+                        <form class="mt-3">
+                            <div class="mb-3">
+                                <label for="websiteUrl" class="form-label">1. Add Your Website</label>
+                                <input type="url" class="form-control" id="websiteUrl" placeholder="https://example.com"
+                                    required>
+                            </div>
+
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-primary">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Form -->
+                <!-- Step Indicator -->
+                <div class="step-indicator my-3">
+                    <!-- <span>2</span> -->
+                    <h5 class="card-title mb-4" style="color:#f4601d"> <span style="color:#000"> 2. </span>Add Website
+                        Details</h5>
+                    <!-- <span>2</span> Verification &nbsp; › &nbsp;
+                    <span>3</span>  -->
+                </div>
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title mb-4">Add Website Details</h5> -->
+
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="niche" class="form-label">Website Niche / Category</label>
+                                    <input type="text" class="form-control" id="niche"
+                                        placeholder="e.g. Technology, Health, Travel" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="language" class="form-label">Primary Language</label>
+                                    <input type="text" class="form-control" id="language"
+                                        placeholder="e.g. English, Spanish" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="traffic" class="form-label">Monthly Traffic</label>
+                                    <input type="number" class="form-control" id="traffic" placeholder="e.g. 1000"
+                                        required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="da" class="form-label">Domain Authority (DA)</label>
+                                    <input type="number" class="form-control" id="da" placeholder="e.g. 20" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="dr" class="form-label">Domain Rating (DR)</label>
+                                    <input type="number" class="form-control" id="dr" placeholder="e.g. 25" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="pricing" class="form-label">Pricing (optional)</label>
+                                    <input type="text" class="form-control" id="pricing"
+                                        placeholder="e.g. $50 per post">
+                                </div>
+                            </div>
+
+                            <div class="text-end mt-4">
+                                <button type="submit" class="btn btn-primary px-4">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        }
+    </script>
+    <!-- Add Website Modal -->
+    <script>
+        const modal = document.getElementById('popupModal');
+
+        document.querySelector('.btn-add-website').addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Optional: Close when clicking outside the modal box
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

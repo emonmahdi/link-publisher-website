@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Link Publisher </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+    <style>
+        :root {
+            --primary-color: #ff5e14;
+            --text-muted: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .navbar-brand img {
+            height: 35px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-wrap: wrap;
+            gap: 1rem;
+            width: 600px;
+            z-index: 10;
+        }
+
+        .nav-item:hover .dropdown {
+            display: flex;
+        }
+
+        .mega-item {
+            flex: 0 0 45%;
+            display: flex;
+            gap: 10px;
+        }
+
+        .mega-item i {
+            color: var(--primary-color);
+        }
+
+        .mega-item h6 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .mega-item p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-orange {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background: #e6520f;
+        }
+
+        .btn-outline {
+            border: 1px solid #ccc;
+            background: transparent;
+            color: #333;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 320px;
+            height: 100%;
+            background: #ffffff;
+            padding: 1.5rem;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1);
+            transition: left 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            z-index: 999;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.open {
+            left: 0;
+        }
+
+        .mobile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .mobile-close {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .mobile-nav .nav-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .mobile-nav .nav-link {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .nav-item.has-dropdown .dropdown-menu {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+            flex-direction: column;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 1rem;
+            gap: 10px;
+        }
+
+        .nav-item.has-dropdown.open .dropdown-menu {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 0.5rem;
+        }
+
+        .nav-item.has-dropdown.open .nav-link i {
+            transform: rotate(180deg);
+            transition: transform 0.3s ease;
+        }
+
+
+        .small-icon {
+            font-size: 0.75rem;
+            margin-left: 5px;
+        }
+
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            margin-top: 0.5rem;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 1rem;
+            gap: 10px;
+        }
+
+        .nav-item.open .dropdown-menu {
+            display: flex;
+        }
+
+        .dropdown-menu .mega-item {
+            display: flex;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .dropdown-menu .mega-item i {
+            color: var(--primary-color);
+        }
+
+
+        /* Hero */
+        .hero-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .hero-section .highlight {
+            color: var(--primary-color);
+        }
+
+        .hero-section p {
+            color: var(--text-muted);
+            margin: 1rem 0;
+        }
+
+        .btn-group-custom {
+            margin: 1.5rem 0;
+        }
+
+        .btn-group-custom .btn {
+            margin-right: 10px;
+        }
+
+        .trusted-by img {
+            height: 30px;
+            margin: 0 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="assets/images/logo.png" alt="Logo" />
+            </div>
+            <div class="nav-links">
+                <div class="nav-item">
+                    <span class="nav-link">Services</span>
+                    <div class="dropdown">
+                        <div class="mega-item"><i class="fas fa-link"></i>
+                            <div>
+                                <h6>Link Building</h6>
+                                <p>Improve rankings with backlinks.</p>
+                            </div>
+                        </div>
+                        <div class="mega-item"><i class="fas fa-edit"></i>
+                            <div>
+                                <h6>Guest Posting</h6>
+                                <p>Quality content on relevant sites.</p>
+                            </div>
+                        </div>
+                        <div class="mega-item"><i class="fas fa-bullhorn"></i>
+                            <div>
+                                <h6>Digital PR</h6>
+                                <p>Get media coverage and backlinks.</p>
+                            </div>
+                        </div>
+                        <div class="mega-item"><i class="fas fa-magic"></i>
+                            <div>
+                                <h6>Niche Edits</h6>
+                                <p>Authority content placement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item"><span class="nav-link">Tools</span></div>
+                <div class="nav-item"><span class="nav-link">Company</span></div>
+                <div class="nav-item"><span class="nav-link">Resources</span></div>
+                <a href="#" class="btn btn-outline">My Dashboard</a>
+                <a href="#" class="btn btn-orange">Sign Up</a>
+            </div>
+            <div class="mobile-toggle" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-header">
+                <span class="mobile-logo">☰ Menu</span>
+                <span class="mobile-close" onclick="toggleMenu()">&times;</span>
+            </div>
+            <div class="mobile-nav">
+                <div class="nav-item has-dropdown">
+                    <div class="nav-link" onclick="toggleDropdown(this)">
+                        Services <i class="fas fa-chevron-down small-icon"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="mega-item"><i class="fas fa-link"></i>
+                            <div>
+                                <h6>Link Building</h6>
+                                <p>Improve rankings.</p>
+                            </div>
+                        </div>
+                        <div class="mega-item"><i class="fas fa-edit"></i>
+                            <div>
+                                <h6>Guest Posting</h6>
+                                <p>Quality content.</p>
+                            </div>
+                        </div>
+                        <div class="mega-item"><i class="fas fa-magic"></i>
+                            <div>
+                                <h6>Niche Edits</h6>
+                                <p>Boost existing content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item"><a href="#">Tools</a></div>
+                <div class="nav-item"><a href="#">Company</a></div>
+                <div class="nav-item"><a href="#">Resources</a></div>
+                <a href="#" class="btn btn-outline">My Dashboard</a>
+                <a href="#" class="btn btn-orange">Sign Up</a>
+            </div>
+        </div>
+
+
+        <section class="hero-section">
+            <div class="alert alert-light border rounded-pill d-inline-block px-4 py-2 mb-4"
+                style="background: #f8f9fa;">
+                <strong>⚠️ Meet Us At brightonSEO San Diego!</strong>
+            </div>
+            <h1>First <span class="highlight">AI-Driven</span> Guest Post & Link Building Platform</h1>
+            <p>The future of link building is here. Say goodbye to manual outreach. Reach wider audiences with AI
+                suggestions.</p>
+            <h5 style="margin: 1rem 0;">Looking for the best link-building platform? Join Link Publishers today!</h5>
+            <div class="btn-group-custom">
+                <a href="#" class="btn btn-orange">Buy Guest Post</a>
+                <a href="#" class="btn btn-outline">Sell Guest Post</a>
+            </div>
+            <p class="text-muted small">Live link or money back/replacement guarantee</p>
+            <div style="margin: 1rem 0;">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle" width="40">
+                <img src="https://randomuser.me/api/portraits/women/47.jpg" class="rounded-circle" width="40">
+                <img src="https://randomuser.me/api/portraits/men/40.jpg" class="rounded-circle" width="40">
+                <span class="small">Loved by 6,000+ customers</span>
+            </div>
+            <p class="text-muted">We are Integrated with</p>
+            <div class="trusted-by">
+                <img src="https://cdn.ahrefs.com/images/site-logo.svg" alt="ahrefs">
+                <img src="https://seeklogo.com/images/S/semrush-logo-D61F7F39B7-seeklogo.com.png" alt="semrush">
+                <img src="https://www.vectorlogo.zone/logos/moz/moz-ar21.svg" alt="moz">
+                <img src="https://www.vectorlogo.zone/logos/google_analytics/google_analytics-icon.svg"
+                    alt="google analytics">
+            </div>
+        </section>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+
+        // function toggleDropdown(el) {
+        //     el.classList.toggle('open');
+        // }
+        function toggleDropdown(trigger) {
+            const parent = trigger.closest('.has-dropdown');
+            parent.classList.toggle('open');
+        }
+
+
+    </script>
+</body>
+
+</html>

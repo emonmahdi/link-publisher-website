@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Affiliate Program | Link Publisher </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+    <style>
+        .profile-container {
+            display: flex;
+            gap: 30px;
+            max-width: 100%;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            /* height: 100%; */
+        }
+
+        .profile-sidebar {
+            background: #dddd;
+            padding: 30px 20px;
+            border-radius: 12px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-sidebar h3 {
+            font-size: 20px;
+        }
+
+        .profile-img {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .profile-img input[type="file"] {
+            display: none;
+        }
+
+        .profile-img label {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: #fc6527;
+            color: #fff;
+            padding: 6px 8px;
+            border-radius: 50%;
+            font-size: 14px;
+            cursor: pointer;
+            border: 2px solid #fff;
+        }
+
+        .profile-img img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #eee;
+        }
+
+        .profile-status {
+            margin: 20px 0;
+        }
+
+        .profile-status span {
+            display: block;
+            margin: 6px 0;
+            font-size: 15px;
+        }
+
+        .profile-status .active {
+            color: green;
+            font-weight: bold;
+        }
+
+        .profile-status .balance {
+            color: #fc6527;
+            font-weight: 600;
+        }
+
+        .password-section {
+            margin-top: 20px;
+        }
+
+        .password-section a {
+            color: #fc6527;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: border 0.3s;
+        }
+
+        .password-input:focus {
+            border-color: #fc6527;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(252, 101, 39, 0.2);
+        }
+
+        .password-toggle-btn {
+            width: 100%;
+            text-align: center;
+            background: #fc6527;
+            color: #fff;
+            border: 2px solid #fc6527;
+            padding: 8px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .password-toggle-btn:hover {
+            background: #fff;
+            color: #fc6527;
+        }
+
+        .password-btn-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .btn-update {
+            background-color: #fc6527;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            flex: 1;
+            transition: background 0.3s;
+        }
+
+        .btn-update:hover {
+            background-color: #e4571d;
+        }
+
+        .btn-cancel-style {
+            background-color: #f1f1f1;
+            color: #444;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            flex: 1;
+            transition: background 0.3s;
+        }
+
+        .btn-cancel-style:hover {
+            background-color: #ddd;
+        }
+
+        .password-error-msg {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+
+
+        .profile-main {
+            flex-grow: 1;
+        }
+
+        .section {
+            background: #ddd;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edit-btns {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            font-size: 14px;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-edit {
+            background-color: transparent;
+            color: #fc6527;
+            font-weight: bold;
+        }
+
+        .btn-save {
+            background-color: #fc6527;
+            color: white;
+            display: none;
+        }
+
+        .btn-cancel {
+            background-color: #eee;
+            display: none;
+        }
+
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 8px 0;
+            align-items: center;
+        }
+
+        .info-label {
+            width: 160px;
+            font-weight: 500;
+        }
+
+        .info-value {
+            flex: 1;
+            color: #555;
+        }
+
+        .info-value input {
+            width: 100%;
+            padding: 6px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="d-flex free-seo-dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar p-3" id="sidebar">
+            <h4 class="logo-text mb-4"> <a href="index.html"><i class="fas fa-paper-plane me-2"></i>Link Publishers</a>
+            </h4>
+            <div class="text-center mb-4">
+                <div class="rounded-circle-amount">$0</div>
+                <p class="mb-0 mt-2 fw-bold">Balance</p>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                <a class="nav-link" href="dashboard-my-website.html"><i class="fas fa-globe me-2"></i> My
+                    Websites</a>
+                <a class="nav-link" href="dashboard-my-orders.html"><i class="fas fa-shopping-cart me-2"></i> My
+                    Orders</a>
+                <a class="nav-link" href="dashboard-paylod.html"><i class="fas fa-wallet me-2"></i> Payouts</a>
+                <a class="nav-link" href="dashboard-affiliate-program.html"><i class="fas fa-handshake me-2"></i>
+                    Affiliate Program</a>
+                <a class="nav-link" href="dashboard-free-seo.html"><i class="fas fa-tools me-2"></i> Free SEO
+                    Tools <span class="badge bg-warning text-dark">New</span></a>
+                <a class="nav-link" href="dashboard-seo-service.html"><i class="fas fa-search-dollar me-2"></i> SEO
+                    Services</a>
+            </nav>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="content w-100">
+            <div class="header">
+                <div class="d-flex align-items-center">
+                    <button class="menu-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h5 class="mb-0 d-none d-md-block">Dashboard</h5>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle fs-4 me-2"></i>
+                        <strong>MD EMON HOWLADER</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item" href="dashboard-profile-page.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="register.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- body content -->
+            <div class="profile-container">
+                <!-- Sidebar -->
+                <div class="profile-sidebar">
+                    <div class="profile-img">
+                        <img src="https://i.pravatar.cc/110?u=1" id="profilePic" alt="Profile">
+                        <label for="uploadImg">📷</label>
+                        <input type="file" id="uploadImg" accept="image/*">
+                    </div>
+                    <h3>MD EMON HOWLADER</h3>
+                    <p>Publisher</p>
+                    <div class="profile-status">
+                        <span class="active">Status: Active</span>
+                        <span class="balance">Balance: $0</span>
+                        <span>Joined on 28 July 2025</span>
+                    </div>
+                    <!-- Password change section -->
+                    <div class="password-section" id="passwordSection">
+                        <button class="btn password-toggle-btn" id="togglePasswordBtn"
+                            onclick="togglePasswordForm()">Change Password</button>
+
+                        <div id="passwordForm" style="display:none; margin-top: 15px;">
+                            <div style="margin-bottom: 10px;">
+                                <input type="password" placeholder="Current Password" id="currentPassword"
+                                    class="password-input">
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <input type="password" placeholder="New Password" id="newPassword"
+                                    class="password-input">
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <input type="password" placeholder="Confirm New Password" id="confirmPassword"
+                                    class="password-input">
+                            </div>
+
+                            <div class="password-btn-group">
+                                <button onclick="savePassword()" class="btn btn-update">Update</button>
+                                <button onclick="togglePasswordForm()" class="btn btn-cancel-style">Cancel</button>
+                            </div>
+
+                            <div id="passwordError" class="password-error-msg"></div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+                <!-- Main Content -->
+                <div class="profile-main">
+
+                    <!-- Basic Info -->
+                    <div class="section" id="basicInfo">
+                        <div class="section-title">
+                            Basic Information
+                            <div class="edit-btns">
+                                <button class="btn btn-edit" onclick="enableEdit('basicInfo')">Edit</button>
+                                <button class="btn btn-save" onclick="saveEdit('basicInfo')">Save</button>
+                                <button class="btn btn-cancel" onclick="cancelEdit('basicInfo')">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Name:</div>
+                            <div class="info-value" data-key="name">MD EMON HOWLADER</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Email:</div>
+                            <div class="info-value" data-key="email">emonhowlader1997@gmail.com</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Phone:</div>
+                            <div class="info-value" data-key="phone">+880 1908131513</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Country:</div>
+                            <div class="info-value" data-key="country">Bangladesh</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Website:</div>
+                            <div class="info-value" data-key="website">https://www.freelanceit.com</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Identity:</div>
+                            <div class="info-value" data-key="identity">In-House Team</div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Info -->
+                    <div class="section" id="paymentInfo">
+                        <div class="section-title">
+                            Payment Information
+                            <div class="edit-btns">
+                                <button class="btn btn-edit" onclick="enableEdit('paymentInfo')">Edit</button>
+                                <button class="btn btn-save" onclick="saveEdit('paymentInfo')">Save</button>
+                                <button class="btn btn-cancel" onclick="cancelEdit('paymentInfo')">Cancel</button>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Payment Country:</div>
+                            <div class="info-value" data-key="payCountry">Select Country</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Preferred Method:</div>
+                            <div class="info-value" data-key="payMethod">paypal</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Paypal Email:</div>
+                            <div class="info-value" data-key="paypalEmail">you@example.com</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        }
+    </script>
+    <script>
+        function copyToClipboard() {
+            const link = document.getElementById("affiliateLink").innerText;
+            navigator.clipboard.writeText(link).then(() => {
+                alert("Affiliate link copied!");
+            });
+        }
+    </script>
+    <script>
+        // Profile image upload
+        document.getElementById('uploadImg').addEventListener('change', function (e) {
+            const reader = new FileReader();
+            reader.onload = function () {
+                document.getElementById('profilePic').src = reader.result;
+            }
+            reader.readAsDataURL(e.target.files[0]);
+        });
+
+        const originalData = {};
+
+        function enableEdit(sectionId) {
+            const section = document.getElementById(sectionId);
+            const values = section.querySelectorAll('.info-value');
+            originalData[sectionId] = {};
+            values.forEach(val => {
+                const key = val.dataset.key;
+                const current = val.textContent;
+                originalData[sectionId][key] = current;
+                val.innerHTML = `<input type="text" name="${key}" value="${current}">`;
+            });
+            toggleButtons(sectionId, true);
+        }
+
+        function saveEdit(sectionId) {
+            const section = document.getElementById(sectionId);
+            const inputs = section.querySelectorAll('input');
+            inputs.forEach(input => {
+                const key = input.name;
+                const parent = input.parentElement;
+                parent.textContent = input.value;
+            });
+            toggleButtons(sectionId, false);
+        }
+
+        function cancelEdit(sectionId) {
+            const section = document.getElementById(sectionId);
+            const values = section.querySelectorAll('.info-value');
+            values.forEach(val => {
+                const key = val.dataset.key;
+                val.textContent = originalData[sectionId][key];
+            });
+            toggleButtons(sectionId, false);
+        }
+
+        function toggleButtons(sectionId, editing) {
+            const section = document.getElementById(sectionId);
+            section.querySelector('.btn-edit').style.display = editing ? 'none' : 'inline-block';
+            section.querySelector('.btn-save').style.display = editing ? 'inline-block' : 'none';
+            section.querySelector('.btn-cancel').style.display = editing ? 'inline-block' : 'none';
+        }
+    </script>
+    <!-- password change features -->
+    <script>
+        let isPasswordFormVisible = false;
+
+        function togglePasswordForm() {
+            const form = document.getElementById('passwordForm');
+            const toggleBtn = document.getElementById('togglePasswordBtn');
+
+            isPasswordFormVisible = !isPasswordFormVisible;
+
+            form.style.display = isPasswordFormVisible ? 'block' : 'none';
+            // toggleBtn.innerText = isPasswordFormVisible ? 'Cancel Password Change' : 'Change Password';
+
+            if (!isPasswordFormVisible) clearPasswordForm();
+        }
+
+        function savePassword() {
+            const current = document.getElementById('currentPassword').value.trim();
+            const newPass = document.getElementById('newPassword').value.trim();
+            const confirm = document.getElementById('confirmPassword').value.trim();
+            const errorDiv = document.getElementById('passwordError');
+
+            errorDiv.innerText = '';
+
+            if (!current || !newPass || !confirm) {
+                errorDiv.innerText = 'All fields are required.';
+                return;
+            }
+
+            if (newPass.length < 6) {
+                errorDiv.innerText = 'New password must be at least 6 characters.';
+                return;
+            }
+
+            if (newPass !== confirm) {
+                errorDiv.innerText = 'Passwords do not match.';
+                return;
+            }
+
+            alert('Password updated successfully!');
+            togglePasswordForm();
+        }
+
+        function clearPasswordForm() {
+            document.getElementById('currentPassword').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('confirmPassword').value = '';
+            document.getElementById('passwordError').innerText = '';
+        }
+
+
+    </script>
+
+</body>
+
+</html>

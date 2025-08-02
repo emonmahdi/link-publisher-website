@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dashboard | Link Publisher </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar p-3" id="sidebar">
+            <h4 class="logo-text mb-4"> <a href="index.html"><i class="fas fa-paper-plane me-2"></i>Link Publishers</a>
+            </h4>
+            <div class="text-center mb-4">
+                <div class="rounded-circle-amount">$0</div>
+                <p class="mb-0 mt-2 fw-bold">Balance</p>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt me-2"></i>
+                    Dashboard</a>
+                <a class="nav-link" href="dashboard-my-website.html"><i class="fas fa-globe me-2"></i> My Websites</a>
+                <a class="nav-link" href="dashboard-my-orders.html"><i class="fas fa-shopping-cart me-2"></i> My
+                    Orders</a>
+                <a class="nav-link" href="dashboard-paylod.html"><i class="fas fa-wallet me-2"></i> Payouts</a>
+                <a class="nav-link" href="dashboard-affiliate-program.html"><i class="fas fa-handshake me-2"></i>
+                    Affiliate Program</a>
+                <a class="nav-link" href="dashboard-free-seo.html"><i class="fas fa-tools me-2"></i> Free SEO Tools
+                    <span class="badge bg-warning text-dark">New</span></a>
+                <a class="nav-link" href="dashboard-seo-service.html"><i class="fas fa-search-dollar me-2"></i> SEO
+                    Services</a>
+            </nav>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="content w-100">
+            <div class="header">
+                <div class="d-flex align-items-center">
+                    <button class="menu-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h5 class="mb-0 d-none d-md-block">Dashboard</h5>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle fs-4 me-2"></i>
+                        <strong>MD EMON HOWLADER</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item" href="dashboard-profile-page.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="register.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-fluid mt-3 main-dashboard-home">
+                <div class="alert alert-success">
+                    Tax information needed - <a href="#" class="alert-link">Click here</a> to complete your profile to
+                    withdraw funds.
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card-box bg-dashboard-info">
+                            <div>Total Websites</div>
+                            <div class="fs-2">0</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-box bg-dashboard-warning">
+                            <div>Total Orders</div>
+                            <div class="fs-2">0</div>
+                            <small>0 Completed Orders | 0 Pending Orders</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-box bg-dashboard-primary">
+                            <div>Total Sales</div>
+                            <div class="fs-2">$0</div>
+                            <small>$0 Amount Withdrawn</small>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-box bg-dashboard-success">
+                            <div>New Customers</div>
+                            <div class="fs-2">0</div>
+                            <small>Last 7 Days</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        }
+    </script>
+</body>
+
+</html>

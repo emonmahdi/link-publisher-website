@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Affiliate Program | Link Publisher </title>
+
+    <!-- Bootstrap CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Dashboard CSS -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+</head>
+
+<body>
+    <div class="d-flex affiliate-dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar p-3" id="sidebar">
+            <h4 class="logo-text mb-4"> <a href="index.html"><i class="fas fa-paper-plane me-2"></i>Link Publishers</a>
+            </h4>
+            <div class="text-center mb-4">
+                <div class="rounded-circle-amount">$0</div>
+                <p class="mb-0 mt-2 fw-bold">Balance</p>
+            </div>
+            <nav class="nav flex-column">
+                <a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt me-2"></i> Dashboard</a>
+                <a class="nav-link" href="dashboard-my-website.html"><i class="fas fa-globe me-2"></i> My
+                    Websites</a>
+                <a class="nav-link" href="dashboard-my-orders.html"><i class="fas fa-shopping-cart me-2"></i> My
+                    Orders</a>
+                <a class="nav-link" href="dashboard-paylod.html"><i class="fas fa-wallet me-2"></i> Payouts</a>
+                <a class="nav-link active" href="dashboard-affiliate-program.html"><i class="fas fa-handshake me-2"></i>
+                    Affiliate Program</a>
+                <a class="nav-link" href="dashboard-free-seo.html"><i class="fas fa-tools me-2"></i> Free SEO Tools
+                    <span class="badge bg-warning text-dark">New</span></a>
+                <a class="nav-link" href="dashboard-seo-service.html"><i class="fas fa-search-dollar me-2"></i> SEO
+                    Services</a>
+            </nav>
+
+        </div>
+
+        <!-- Main Content -->
+        <div class="content w-100">
+            <div class="header">
+                <div class="d-flex align-items-center">
+                    <button class="menu-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h5 class="mb-0 d-none d-md-block">Dashboard</h5>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-user-circle fs-4 me-2"></i>
+                        <strong>MD EMON HOWLADER</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="profileDropdown">
+                        <li><a class="dropdown-item" href="dashboard-profile-page.html">Profile</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="register.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- body content -->
+            <div class="container my-4">
+
+                <!-- Alert Banner -->
+                <div class="alert-banner">
+                    <strong>Tax information needed</strong>
+                    <span><a href="#" class="text-primary text-decoration-underline">Click here</a> to complete your
+                        profile to withdraw funds.</span>
+                </div>
+
+                <h4 class="mb-4 fw-bold">Affiliate Program</h4>
+                <p class="mb-4">Refer us to your advertisers and earn up to <strong>$1000</strong> every month!</p>
+
+                <div class="row g-4">
+                    <!-- Overview -->
+                    <div class="col-md-4">
+                        <div class="section-card p-0">
+                            <div class="bg-overview text-white px-3 py-2 rounded-top">
+                                <h6 class="fw-bold mb-0">Overview</h6>
+                            </div>
+                            <table class="table table-bordered mb-0">
+                                <tbody>
+                                    <tr>
+                                        <th>Total Clicks</th>
+                                        <td>128</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Sign Up</th>
+                                        <td>45</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Advertisers' Paid</th>
+                                        <td>$850.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Commission Pending</th>
+                                        <td>$150.00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Commission Earned</th>
+                                        <td>$300.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- Affiliate Link & Invite -->
+                    <div class="col-md-8">
+                        <div class="section-card mb-4">
+                            <h6 class="fw-bold">Share an Affiliate Link</h6>
+                            <!-- Copy + Share Section -->
+                            <div
+                                class="copy-share-wrap d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mt-3">
+
+                                <!-- Copy Link Area -->
+                                <div class="copy-link flex-grow-1 w-100">
+                                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                        <span id="affiliateLink"
+                                            class="text-truncate me-3">https://dashboard.linkpublishers.com/register/MD80C600</span>
+                                        <button onclick="copyToClipboard()">Copy Link</button>
+                                    </div>
+                                </div>
+
+                                <!-- Share Icons -->
+                                <div class="d-flex flex-column align-items-start">
+                                    <span class="text-muted small mb-1">Share this link</span>
+                                    <div class="social-icons d-flex gap-3">
+                                        <i class="fab fa-facebook-f"></i>
+                                        <i class="fab fa-x-twitter"></i>
+                                        <i class="fab fa-whatsapp"></i>
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="section-card">
+                            <h6 class="fw-bold mb-1">Invite Your Advertisers</h6>
+                            <p class="badge-note mb-3">Type in your advertisers' email ID below to get started</p>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control email-input"
+                                    placeholder="Enter email and press Enter">
+                                <button class="btn btn-send" type="button">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Commission Report -->
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="mt-5 border p-3">
+                            <h6 class="fw-bold">Commission Report</h6>
+                            <div class="section-card">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <div>
+                                        Show
+                                        <select class="form-select d-inline-block w-auto">
+                                            <option>10</option>
+                                            <option>25</option>
+                                            <option>50</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" class="form-control w-25" placeholder="Search">
+                                </div>
+
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>User ID</th>
+                                            <th>No. of Completed Orders</th>
+                                            <th>Total Commission</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>USR1024</td>
+                                            <td>12</td>
+                                            <td>$48.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>USR1058</td>
+                                            <td>7</td>
+                                            <td>$21.50</td>
+                                        </tr>
+                                        <tr>
+                                            <td>USR1089</td>
+                                            <td>15</td>
+                                            <td>$73.20</td>
+                                        </tr>
+                                        <tr>
+                                            <td>USR1103</td>
+                                            <td>3</td>
+                                            <td>$9.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>USR1147</td>
+                                            <td>22</td>
+                                            <td>$110.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                                <div class="d-flex justify-content-end pagination-buttons mt-3">
+                                    <button class="btn btn-custom-orange me-2">← Previous</button>
+                                    <button class="btn btn-custom-orange">Next →</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!-- Terms & Conditions -->
+                        <div class="mt-5 border p-3">
+                            <h6 class="fw-bold">Terms & Conditions</h6>
+                            <ul class="terms-list">
+                                <li>Advertisers need to register via your unique affiliate link.</li>
+                                <li>They receive a 10% discount on their first GP order.</li>
+                                <li>You earn 2% of the total amount for each order completed.</li>
+                                <li>Orders are reviewed; suspicious activity will lead to action.</li>
+                                <li>Link Publishers may modify/remove this offer at any time.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (with Popper) -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="assets/js/all.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("collapsed");
+        }
+    </script>
+    <script>
+        function copyToClipboard() {
+            const link = document.getElementById("affiliateLink").innerText;
+            navigator.clipboard.writeText(link).then(() => {
+                alert("Affiliate link copied!");
+            });
+        }
+    </script>
+</body>
+
+</html>
