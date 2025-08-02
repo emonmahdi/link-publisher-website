@@ -950,6 +950,57 @@ header {
 /* =================Features Section End============================ */
 
 /* ===============================
+   achivement section Styles
+   =============================== */
+.achievement-section {
+  background: #fff;
+}
+
+.achievement-row {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.single-achievement {
+  padding: 30px 20px;
+  text-align: center;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.single-achievement h3 {
+  color: var(--web-primary);
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.single-achievement p {
+  margin: 0;
+  color: #7b7b7b;
+  font-size: 20px;
+}
+
+/* Right border for all except the last item (desktop only) */
+@media (min-width: 768px) {
+  .border-right {
+    border-right: 1px solid #ddd;
+  }
+}
+
+/* Stack vertically on smaller screens */
+@media (max-width: 767.98px) {
+  .single-achievement {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .achievement-row .col-6:last-child .single-achievement {
+    border-bottom: none;
+  }
+}
+
+/* ===============================
    Registration Styles
    =============================== */
 .register-section {

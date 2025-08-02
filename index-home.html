@@ -375,6 +375,41 @@
         </div>
     </section>
 
+    <!-- Achivement section Start -->
+    <section class="achievement-section py-5">
+        <div class="container">
+            <div class="row g-0 achievement-row">
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement border-right">
+                        <h3>114,521+</h3>
+                        <p>High-Quality Websites</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement border-right">
+                        <h3>21,311+</h3>
+                        <p>Verified Publishers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement border-right">
+                        <h3>9,644+</h3>
+                        <p>Worldwide Advertisers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement">
+                        <h3>39,962+</h3>
+                        <p>Backlinks Built</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Achivement section End -->
+
 
 
 
@@ -385,8 +420,9 @@
 
     <!-- Logo Slider JS -->
     <script src="assets/js/logoSlider.js"></script>
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- counter js -->
+    <script src="assets/js/counter.js"></script>
 
     <script>
         function toggleMenu() {
@@ -410,30 +446,7 @@
             parent.classList.toggle('open');
         }
     </script>
-    <!-- logo slider -->
-    <script>
-        const track = document.getElementById("logoTrack");
-        const interval = 4000;
-        let isTransitioning = false;
 
-        setInterval(() => {
-            if (isTransitioning) return;
-            isTransitioning = true;
-
-            const firstItem = track.children[0];
-            const itemWidth = firstItem.getBoundingClientRect().width;
-
-            track.style.transition = "transform 0.6s ease-in-out";
-            track.style.transform = `translateX(-${itemWidth}px)`;
-
-            setTimeout(() => {
-                track.appendChild(firstItem);
-                track.style.transition = "none";
-                track.style.transform = "translateX(0)";
-                isTransitioning = false;
-            }, 600);
-        }, interval);
-    </script>
 
 
 </body>
