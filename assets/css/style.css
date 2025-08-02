@@ -880,7 +880,7 @@ header {
   padding: 40px 0;
   overflow: hidden;
 }
-.section-title h2 {
+.featured-logo-section .section-title h2 {
   font-size: 20px;
   color: var(--web-primary);
   font-weight: 400;
@@ -997,6 +997,113 @@ header {
 
   .achievement-row .col-6:last-child .single-achievement {
     border-bottom: none;
+  }
+}
+
+/* ===============================
+   wall-of-love-section Styles Start
+   =============================== */
+.wall-of-love-section {
+  padding: 40px 0;
+  overflow: hidden;
+}
+.section-title h5 {
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 600;
+}
+.section-title h2 {
+  color: var(--web-secondary);
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.single-wall-love {
+  padding: 30px 25px;
+  border-radius: 5px;
+  color: #848484;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.wall-profile img {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+}
+.wall-profile h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--web-secondary);
+}
+.single-image-video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  max-width: 100%;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.single-image-video:hover {
+  transform: translateY(-4px);
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: 220px; /* Shorter visual height */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.overlay-image-video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  color: white;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.client-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.video-icon {
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.video-icon:hover {
+  color: #ff4c60;
+}
+
+/* Modal Video Responsive */
+#videoModal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .video-thumbnail {
+    height: 180px;
+  }
+
+  #videoModal iframe {
+    height: 240px;
   }
 }
 
