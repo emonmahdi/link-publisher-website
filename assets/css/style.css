@@ -808,6 +808,46 @@ header {
 }
 
 /* ===============================
+   Hero Banner Image Section Styles
+   =============================== */
+.hero-banner-image-section {
+  background: url("/assets/images/tablet.webp") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh; /* full screen on large devices */
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .hero-banner-image-section {
+    padding: 50px 16px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .hero-banner-image-section {
+    min-height: 80vh;
+    padding: 40px 14px;
+    background-position: top center; /* more content-friendly view */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner-image-section {
+    min-height: 70vh;
+    padding: 30px 12px;
+    background-size: contain; /* Prevent image cut-off */
+    background-repeat: no-repeat;
+  }
+}
+
+/* ===============================
    Registration Styles
    =============================== */
 .register-section {
