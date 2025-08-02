@@ -42,6 +42,7 @@
 </head>
 
 <body>
+    <!-- Header Start -->
     <header>
         <nav class="navbar shadow">
             <div class="container">
@@ -177,28 +178,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-                    <!-- <div class="nav-item">
-                        <span class="nav-link">
-                            Tools <i class="fas fa-angle-down dropdown-arrow"></i>
-                        </span>
-                        <div class="dropdown-menu-items">
-                            <div class="mega-item"><i class="fas fa-link dropdown-icon"></i>
-                                <div>
-                                    <h6>Dofollow Nofollow Link Checker</h6>
-                                </div>
-                            </div>
-                            <div class="mega-item"><i class="fas fa-edit dropdown-icon"></i>
-                                <div>
-                                    <h6>Broken link Checker</h6>
-                                    <p>Quality content on relevant sites.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <div class="nav-item company-dropdown">
                         <span class="nav-link">
                             Company <i class="fas fa-angle-down dropdown-arrow"></i>
@@ -349,8 +328,51 @@
 
         </section>
     </header>
+    <!-- Header End -->
 
-    <section>
+    <!---------- Featured logo Section Start ------------>
+    <section id="featured-logo-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Get Featured On</h2>
+            </div>
+        </div>
+        <div class="container-fluid py-2">
+            <div class="logo-slider-wrapper">
+                <div id="logoTrack" class="logo-track">
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/mashable-logo.png" class="logo-item" alt="Mashable" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/chicago-tribune-logo.png" class="logo-item"
+                            alt="Chicago Tribune" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/digital-journal-logo.png" class="logo-item"
+                            alt="Digital Journal" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/forbes-Iogo.png" class="logo-item" alt="Forbes" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/hubspot-logo.png" class="logo-item" alt="HubSpot" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/marketwatch-logo.png" class="logo-item" alt="MarketWatch" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/mn-logo.png" class="logo-item" alt="MN" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/msn-logo.webp" class="logo-item" alt="MSN" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/yahoo-finance-logo.png" class="logo-item"
+                            alt="Yahoo Finance" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -360,6 +382,12 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- Font Awesome -->
     <script src="assets/js/all.min.js"></script>
+
+    <!-- Logo Slider JS -->
+    <script src="assets/js/logoSlider.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
     <script>
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
@@ -382,6 +410,32 @@
             parent.classList.toggle('open');
         }
     </script>
+    <!-- logo slider -->
+    <script>
+        const track = document.getElementById("logoTrack");
+        const interval = 4000;
+        let isTransitioning = false;
+
+        setInterval(() => {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const firstItem = track.children[0];
+            const itemWidth = firstItem.getBoundingClientRect().width;
+
+            track.style.transition = "transform 0.6s ease-in-out";
+            track.style.transform = `translateX(-${itemWidth}px)`;
+
+            setTimeout(() => {
+                track.appendChild(firstItem);
+                track.style.transition = "none";
+                track.style.transform = "translateX(0)";
+                isTransitioning = false;
+            }, 600);
+        }, interval);
+    </script>
+
+
 </body>
 
 </html>
