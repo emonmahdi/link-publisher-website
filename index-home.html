@@ -18,12 +18,14 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
 
+
+
 </head>
 
 <body>
     <!-- Header Start -->
     <header>
-        <nav class="navbar shadow">
+        <nav class="navbar shadow fixed" id="mainNavbar">
             <div class="container">
                 <div class="navbar-brand">
                     <img src="assets/images/logo.png" alt="Logo" />
@@ -784,20 +786,11 @@
                 <div class="unlock-right-image">
                     <img src="assets/images/front-unlock.svg" class="img-fluid" alt="">
                 </div>
-                <!-- <div class="promo-icons position-relative">
-                    <div class="icon-node icon-1"><i class="fas fa-clock"></i></div>
-                    <div class="icon-node icon-2"><i class="fas fa-bullhorn"></i></div>
-                    <div class="icon-node icon-3"><i class="fas fa-globe"></i></div>
-                    <div class="icon-node icon-4"><i class="fas fa-chart-line"></i></div>
-                    <div class="icon-node icon-5"><i class="fas fa-edit"></i></div>
-                    <div class="icon-node icon-6 icon-center"><i class="fas fa-paper-plane"></i></div>
-                </div> -->
             </div>
         </div>
     </section>
     <!-- Unlock section End -->
     <!-- Footer section Start -->
-    \<!-- Footer Section -->
     <footer>
         <div class="container">
             <div class="row">
@@ -934,6 +927,20 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     </script>
+    <!-- sticky menu -->
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("mainNavbar");
+
+            if (window.scrollY > 100) {
+                navbar.classList.add("is-sticky");
+            } else {
+                navbar.classList.remove("is-sticky");
+            }
+        });
+    </script>
+
+
 
 
 

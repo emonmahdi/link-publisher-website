@@ -108,17 +108,44 @@ header {
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   /* overflow: hidden; */
+  position: relative;
 }
 
-.navbar {
+/* .navbar {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+} */
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.navbar.is-sticky {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .navbar-brand img {
-  height: 35px;
+  height: 60px;
 }
 
 .nav-links {
@@ -607,7 +634,7 @@ header {
   transition: left 0.4s ease;
   display: flex;
   flex-direction: column;
-  z-index: 999;
+  z-index: 9999;
   overflow-y: auto;
 }
 
@@ -693,6 +720,7 @@ header {
   /* padding: 80px 20px; */
   width: 50%;
   margin: 40px auto;
+  margin-top: 120px; /* match navbar height */
 }
 .meet-us-part {
   border: 1px solid #ddd;
@@ -1496,7 +1524,7 @@ footer {
 
 .footer-description {
   font-size: 14px;
-  color: #444;
+  color: var(--text-para);
   max-width: 400px;
   margin-top: 15px;
 }
@@ -1520,7 +1548,7 @@ footer {
 
 .footer-links a {
   display: block;
-  color: #0c2431;
+  color: var(--text-para);
   text-decoration: none;
   margin-bottom: 10px;
   font-size: 14px;
