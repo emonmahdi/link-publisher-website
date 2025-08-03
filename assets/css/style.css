@@ -1398,6 +1398,196 @@ header {
   transform: rotate(45deg);
 }
 /* ===============================
+   Unlock Section Styles
+   =============================== */
+.promo-section {
+  background: linear-gradient(135deg, var(--web-primary));
+  border-radius: 16px;
+  padding: 60px 40px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.promo-title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.promo-text {
+  font-size: 16px;
+  opacity: 0.95;
+}
+
+.promo-btn {
+  background-color: #fff;
+  color: #f25d27;
+  font-weight: 600;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin-top: 24px;
+  transition: 0.3s ease;
+}
+
+.promo-btn:hover {
+  background-color: #fbe0d6;
+  color: #d84315;
+}
+
+.promo-icons {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.icon-node {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+/* Connecting lines using ::before pseudo elements */
+.icon-node::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.icon-6::before {
+  display: none;
+}
+/* ===============================
+   Footer Section Styles
+   =============================== */
+footer {
+  background-color: #fff;
+  color: #0c2431;
+  padding-top: 60px;
+  border-top: 1px solid #eee;
+}
+
+.footer-logo i {
+  color: #f25d27;
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.footer-logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #0c2431;
+}
+
+.footer-description {
+  font-size: 14px;
+  color: #444;
+  max-width: 400px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #f25d27;
+  font-size: 18px;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #d84315;
+}
+
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0c2431;
+}
+
+.footer-links a {
+  display: block;
+  color: #0c2431;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.subscribe-input {
+  border-radius: 5px;
+  padding-left: 36px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.input-group-text {
+  background-color: #fff;
+  border: none;
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  top: 6px;
+  color: #888;
+}
+
+.subscribe-btn {
+  background-color: #f25d27;
+  border: none;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.subscribe-btn:hover {
+  background-color: #d84315;
+}
+
+.footer-bottom {
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  text-decoration: none;
+  color: #0c2431;
+  margin-left: 15px;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+.go-top {
+  color: #f25d27;
+  font-weight: 600;
+}
+
+.go-top i {
+  margin-left: 5px;
+}
+/* ===============================
    Registration Styles
    =============================== */
 .register-section {
