@@ -44,6 +44,26 @@ ul {
 ul li {
   list-style: none;
 }
+.service-section-title {
+  max-width: 80%;
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-section-title .service-heading {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-section-title .service-subtitle {
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  letter-spacing: 0.32px;
+}
 /* ------------------Servide To Header Area------------------ */
 .link-building-header-section {
   padding: 120px 0;
@@ -163,27 +183,6 @@ ul li {
   color: var(--background);
 }
 
-.service-section-title {
-  max-width: 810px;
-  margin: 0px auto;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.service-section-title .service-heading {
-  color: #fff;
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.service-subtitle {
-  font-size: 16px;
-  line-height: 26px;
-  color: #fff;
-  letter-spacing: 0.32px;
-}
-
 .pricing-card {
   border-radius: 20px;
   border: none;
@@ -295,3 +294,83 @@ ul li {
   }
 }
 /* ----------Pricing Section End-------------- */
+/* ----------Sercvice Why Choose Section Start-------------- */
+.service-why-choose-us {
+  padding: 40px 0;
+  overflow: hidden;
+}
+.service-why-choose-us .service-section-title .service-heading {
+  color: var(--web-secondary);
+}
+.service-why-choose-us .service-section-title .service-subtitle {
+  color: var(--text-para);
+}
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+  color: #f25f3a;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.feature-title {
+  font-weight: 700;
+  color: var(--web-primary);
+  margin-bottom: 5px;
+}
+
+.feature-text {
+  color: var(--web-secondary);
+  line-height: 26px;
+  font-weight: 500;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: var(--text-para);
+}
+/* ----------Sercvice Why Choose Section End-------------- */
+/* ----------Highlight Marketing section Start  -------------- */
+.highlight-marketing-section {
+  padding: 40px 0;
+  overflow: hidden;
+}
+.highlight-section-heading {
+  font-weight: 500;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin-bottom: 25px;
+  color: var(--web-secondary);
+}
+.highlight-section-para {
+  font-size: 16px;
+  color: var(--web-secondary);
+  margin: 15px 0;
+}
+.highlight-list {
+  color: var(--web-secondary);
+  position: relative;
+  margin-left: 30px;
+}
+.highlight-list:before {
+  content: "";
+  position: absolute;
+  background-image: url("/assets/images/service/provide-img.svg");
+  background-repeat: no-repeat;
+  left: -30px;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  background-size: 100%, 100%;
+}
+.common-para-mute-text {
+  color: var(--text-para);
+}
+
+/* ----------Highlight Marketing section End  -------------- */
