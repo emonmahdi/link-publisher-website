@@ -420,3 +420,29 @@ ul li {
 }
 
 /* ----------Link Building Process section End  -------------- */
+/* ----------cta-section Section Start  -------------- */
+.cta-box {
+  background-image: url("/assets/images/service/link-building-lap.webp"); /* Replace with actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0b253a; /* Fallback color */
+  border-radius: 16px;
+}
+
+.cta-section h3 {
+  font-size: 1.75rem;
+}
+
+.btn-warning {
+  background-color: #f26522;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #d8551d;
+}
+.text-build-features {
+  color: var(--text-para);
+}
+/* ----------cta-section Section End  -------------- */
