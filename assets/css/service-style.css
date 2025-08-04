@@ -517,3 +517,37 @@ ul li {
   }
 }
 /* ----------Why Hire Section End  -------------- */
+/* ----------Faq Section Start  -------------- */
+.faq-section {
+  padding: 40px 0;
+  overflow: hidden;
+}
+.faq-title-heading {
+  color: var(--web-secondary);
+}
+.faq-section .accordion-button {
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: #fff;
+  color: #003f5c;
+  box-shadow: none;
+  padding-right: 2.5rem;
+  transition: background 0.3s;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  background-color: #f9f9f9;
+}
+
+.faq-section .icon-toggle {
+  font-size: 1.5rem;
+  color: #f26522;
+  transition: transform 0.3s ease;
+}
+
+/* Remove default icon */
+.accordion-button::after {
+  display: none;
+}
+
+/* ----------Faq Section End  -------------- */
