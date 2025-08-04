@@ -63,7 +63,8 @@ ul li {
 
 .btn-link-publisher-primary:hover {
   background: transparent;
-  border: 1px solid #ddd;
+  color: var(--web-primary);
+  border: 1px solid var(--web-primary);
 }
 
 .btn-outline-link-publisher {

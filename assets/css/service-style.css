@@ -111,8 +111,14 @@ ul li {
   flex-wrap: wrap;
 }
 .service-header-section-btn .btn {
-  font-size: 22px;
+  font-size: 16px;
   padding: 10px 30px;
+  min-width: 230px;
+  text-align: center;
+}
+.service-header-section-btn .btn-link-publisher-primary:hover {
+  color: var(--web-primary);
+  border: 1px solid var(--web-primary);
 }
 
 .video-container {
@@ -153,37 +159,70 @@ ul li {
 /* ----------Pricing Section Start-------------- */
 .pricing-section {
   background-color: #132936;
+  padding: 50px 0;
   color: var(--background);
 }
 
-.section-title {
-  color: var(--background);
+.service-section-title {
+  max-width: 810px;
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-section-title .service-heading {
+  color: #fff;
+  font-size: 36px;
   font-weight: 700;
-  font-family: var(--font-family);
+  margin-bottom: 15px;
 }
 
-.section-subtitle {
-  color: var(--muted);
-  max-width: 700px;
-  margin: 0 auto;
+.service-subtitle {
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  letter-spacing: 0.32px;
 }
 
 .pricing-card {
-  border-radius: 15px;
+  border-radius: 20px;
   border: none;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  max-height: 550px; /* To make overflow work */
+  max-height: 550px;
+  transition: 0.4s;
+}
+.pricing-card:hover {
+  background-color: var(--web-primary);
+  color: #fff;
+}
+.pricing-card:hover .card-title,
+.pricing-card:hover .card-price {
+  color: #fff;
+}
+.pricing-card:hover .btn-outline-primary {
+  background-color: #fff;
+  color: var(--web-primary);
 }
 
 .pricing-card .card-title {
-  font-weight: 600;
-  font-family: var(--font-family);
+  text-transform: capitalize;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 0.4px;
+  padding-bottom: 8px;
+  display: block;
   color: var(--web-secondary);
 }
 
 .pricing-card .card-price {
-  color: var(--text);
-  font-weight: 700;
+  margin-bottom: 0;
+  font-weight: 600;
+  letter-spacing: 0.96px;
+  font-size: 42px;
+  line-height: 50px;
+  color: var(--web-secondary);
 }
 
 .pricing-card .btn-outline-primary {
@@ -193,8 +232,8 @@ ul li {
 }
 
 .pricing-card .btn-outline-primary:hover {
-  background-color: var(--web-primary);
-  color: white;
+  background-color: #fff;
+  color: var(--web-primary);
 }
 
 .pricing-card .btn-light {
@@ -207,13 +246,36 @@ ul li {
   background-color: var(--web-primary);
   color: white;
 }
+.recommended-badge {
+  background: #fff;
+  padding: 20px;
+  color: var(--web-primary);
+  box-shadow: 16px 24px 64px #f2652d3d;
+  border: 1px solid var(--web-primary);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.pricing-card.recommended .card-price {
+  color: #fff;
+}
 
 .pricing-card.recommended .card-title {
   color: white;
 }
 
 .plan-features {
-  padding-right: 8px;
+  min-height: 300px;
+  max-height: 300px;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 0 5px;
+  margin-bottom: 25px;
+}
+.plan-features ul li {
+  padding: 0 0 15px 15px;
+}
+.plan-features ul li .fa-circle-check {
+  margin-right: 10px;
 }
 
 /* Custom Scrollbar for features */
