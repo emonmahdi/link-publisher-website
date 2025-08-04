@@ -534,7 +534,9 @@ ul li {
   padding-right: 2.5rem;
   transition: background 0.3s;
 }
-
+.accordion-body {
+  color: var(--text-para);
+}
 .faq-section .accordion-button:not(.collapsed) {
   background-color: #f9f9f9;
 }
@@ -551,3 +553,70 @@ ul li {
 }
 
 /* ----------Faq Section End  -------------- */
+/* ----------ready-posting Section Start  -------------- */
+.ready-posting {
+  padding: 40px 0;
+  overflow: hidden;
+}
+.posting-body {
+  padding: 60px 40px;
+  background: #f2652d;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.posting-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 13px;
+  background-image: url("/assets/images/service/guest-level-left.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 150px;
+  z-index: -1; /* Place background below the content */
+}
+.posting-body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 300px;
+  background-image: url("/assets/images/service/guest-level-right.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 140px;
+  z-index: -1;
+}
+
+.btn-get-started {
+  background-color: #fff;
+  padding: 10px 50px;
+  color: var(--web-primary);
+  margin-top: 20px;
+
+  &:hover {
+    background-color: #f3ebeb;
+    color: var(--web-hover-primary);
+  }
+}
+
+@media (max-width: 768px) {
+  .posting-body::before {
+    width: 300px;
+    height: 150px;
+  }
+  .posting-body::after {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+/* ----------ready-posting Section End  -------------- */
