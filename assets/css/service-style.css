@@ -486,3 +486,34 @@ ul li {
   background-size: cover;
 }
 /* ----------Stand Out Section End  -------------- */
+/* ----------Why Hire Section Start  -------------- */
+.why-hire-section {
+  padding: 40px 0;
+  overflow: hidden;
+}
+.why-hire-section .service-section-title {
+  text-align: left;
+  max-width: 100%;
+}
+.why-hire-section .service-section-title .service-heading {
+  color: var(--web-secondary);
+}
+.why-hire-section .service-section-title p {
+  color: var(--web-secondary);
+}
+.single-hire-item p {
+  color: var(--web-secondary);
+}
+.click-icon-image img {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .chart-overlay {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+  }
+}
+/* ----------Why Hire Section End  -------------- */
