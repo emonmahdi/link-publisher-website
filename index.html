@@ -5,135 +5,938 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Dashboard | Link Publisher </title>
+    <title>Link Publisher</title>
 
     <!-- Bootstrap CSS -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link href="assets/css/all.min.css" rel="stylesheet">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
     <!-- Custom CSS -->
     <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- Dashboard CSS -->
     <link href="assets/css/dashboard.css" rel="stylesheet">
 
-    <!-- Favicon (Optional) -->
+    <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f8f9fa;
-        }
-    </style>
+
+
+
 </head>
 
 <body>
-    <div class="d-flex">
-        <!-- Sidebar -->
-        <div class="sidebar p-3" id="sidebar">
-            <h4 class="logo-text mb-4"> <a href="index.html"><i class="fas fa-paper-plane me-2"></i>Link Publishers</a>
-            </h4>
-            <div class="text-center mb-4">
-                <div class="rounded-circle-amount">$0</div>
-                <p class="mb-0 mt-2 fw-bold">Balance</p>
-            </div>
-            <nav class="nav flex-column">
-                <a class="nav-link active" href="index.html"><i class="fas fa-tachometer-alt me-2"></i>
-                    Dashboard</a>
-                <a class="nav-link" href="dashboard-my-website.html"><i class="fas fa-globe me-2"></i> My Websites</a>
-                <a class="nav-link" href="dashboard-my-orders.html"><i class="fas fa-shopping-cart me-2"></i> My
-                    Orders</a>
-                <a class="nav-link" href="dashboard-paylod.html"><i class="fas fa-wallet me-2"></i> Payouts</a>
-                <a class="nav-link" href="dashboard-affiliate-program.html"><i class="fas fa-handshake me-2"></i>
-                    Affiliate Program</a>
-                <a class="nav-link" href="dashboard-free-seo.html"><i class="fas fa-tools me-2"></i> Free SEO Tools
-                    <span class="badge bg-warning text-dark">New</span></a>
-                <a class="nav-link" href="dashboard-seo-service.html"><i class="fas fa-search-dollar me-2"></i> SEO
-                    Services</a>
-            </nav>
+    <!-- Header Start -->
+    <header>
+        <nav class="navbar shadow fixed" id="mainNavbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a href="index.html"><img src="assets/images/logo.png" alt="Logo" /></a>
+                </div>
+                <div class="nav-links">
+                    <div class="nav-item nav-item-service">
+                        <span class="nav-link">
+                            Services <i class="fas fa-angle-down dropdown-arrow"></i>
+                        </span>
+                        <div class="dropdown-menu-items">
+                            <div class="mega-item">
+                                <i class="fas fa-link dropdown-icon"></i>
+                                <div>
+                                    <h6> <a href="services-link-building.html">Link Building</a></h6>
+                                    <p>Improve rankings with backlinks.</p>
+                                </div>
+                            </div>
+                            <div class="mega-item">
+                                <i class="fas fa-edit dropdown-icon"></i>
+                                <div>
+                                    <h6> <a href="#">Guest Posting</a></h6>
+                                    <p>Quality content on relevant sites.</p>
+                                </div>
+                            </div>
+                            <div class="mega-item">
+                                <i class="fas fa-bullhorn dropdown-icon"></i>
+                                <div>
+                                    <h6> <a href="#">Digital PR</a></h6>
+                                    <p>Get media coverage and backlinks.</p>
+                                </div>
+                            </div>
+                            <div class="mega-item">
+                                <i class="fas fa-magic dropdown-icon"></i>
+                                <div>
+                                    <h6> <a href="#">Niche Edits</a></h6>
+                                    <p>Authority content placement.</p>
+                                </div>
+                            </div>
+                            <div class="mega-item">
+                                <i class="fas fa-share-alt dropdown-icon"></i>
+                                <div>
+                                    <h6> <a href="#">Social Signals</a></h6>
+                                    <p>Boost visibility through social shares.</p>
+                                </div>
+                            </div>
+                            <div class="mega-item">
+                                <i class="fas fa-chart-line dropdown-icon"></i>
+                                <div>
+                                    <h6> <a href="#">SEO Audits</a></h6>
+                                    <p>Identify and fix site issues fast.</p>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+
+                    <div class="nav-item tools-dropdown">
+                        <span class="nav-link">
+                            Tools <i class="fas fa-angle-down dropdown-arrow"></i>
+                        </span>
+                        <div class="dropdown-tools-menu">
+                            <!-- Extension Section -->
+                            <div class="tools-section">
+                                <h6 class="section-title">Extension</h6>
+                                <div class="tool-item">
+                                    <i class="fas fa-puzzle-piece tool-icon"></i>
+                                    <div>
+                                        <h6>Website Finder</h6>
+                                        <p>Find Guest Post Websites Instantly With Chrome Extension</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="divider" />
+
+                            <!-- Tools Section with 2 Columns -->
+                            <div class="tools-section">
+                                <h6 class="section-title">Tools</h6>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="fas fa-link tool-icon"></i>
+                                        <div>
+                                            <h6>Dofollow Nofollow Link Checker <span class="badge new">New</span></h6>
+                                            <p>Check Dofollow And Nofollow Links Anytime, Anywhere!</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fas fa-unlink tool-icon"></i>
+                                        <div>
+                                            <h6>Broken link checker <span class="badge new">New</span></h6>
+                                            <p>Identify And Fix Any Broken Links</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fas fa-calendar-alt tool-icon"></i>
+                                        <div>
+                                            <h6>Domain Age Checker <span class="badge new">New</span></h6>
+                                            <p>Easy, Fast, And Free Domain Age Analysis.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fas fa-chart-bar tool-icon"></i>
+                                        <div>
+                                            <h6>Domain Authority Checker <span class="badge coming">Coming Soon</span>
+                                            </h6>
+                                            <p>Check And Analyze Your Domain Authority Score</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fas fa-sitemap tool-icon"></i>
+                                        <div>
+                                            <h6>Link Analyzer <span class="badge new">New</span></h6>
+                                            <p>Analyzes Your Website’s Internal And External Links.</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fab fa-google tool-icon"></i>
+                                        <div>
+                                            <h6>Google Index Checker <span class="badge coming">Coming Soon</span></h6>
+                                            <p>Check Google Indexing For Your Web Pages</p>
+                                        </div>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="fas fa-search tool-icon"></i>
+                                        <div>
+                                            <h6>Backlink Status Checker <span class="badge new">New</span></h6>
+                                            <p>Track & Ensure Your Website’s Links Are Active!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-item company-dropdown">
+                        <span class="nav-link">
+                            Company <i class="fas fa-angle-down dropdown-arrow"></i>
+                        </span>
+                        <div class="dropdown-company-menu">
+                            <ul class="company-list">
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-users"></i>
+                                        <span>About Us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-heart"></i>
+                                        <span>Life at Link Publisher</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>Contact Us</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>Events</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nav-item resources-dropdown">
+                        <span class="nav-link">
+                            Resources <i class="fas fa-angle-down dropdown-arrow"></i>
+                        </span>
+                        <div class="dropdown-resources-menu">
+                            <ul class="resources-list">
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-blog"></i>
+                                        <span>Blog</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>FAQs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-life-ring"></i>
+                                        <span>Help Center</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <a href="#" class="btn btn-outline-link-publisher">My Dashboard</a>
+                    <a href="#" class="btn btn-link-publisher-primary">Sign Up</a>
+                </div>
+
+                <div class="mobile-toggle" onclick="toggleMenu()">&#9776;</div>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-header">
+                <span class="mobile-logo">☰ Menu</span>
+                <span class="mobile-close" onclick="toggleMenu()">&times;</span>
+            </div>
+            <div class="mobile-nav">
+                <div class="nav-item has-dropdown">
+                    <div class="nav-link" onclick="toggleDropdown(this)">
+                        Services <i class="fas fa-chevron-down small-icon"></i>
+                    </div>
+                    <div class="dropdown-menu">
+                        <div class="mega-item"><i class="fas fa-link"></i>
+                            <div>
+                                <h6>Link Building</h6>
+                                <p>Improve rankings.</p>
+                            </div>
+                        </div>
+                        <div class="mega-item"><i class="fas fa-edit"></i>
+                            <div>
+                                <h6>Guest Posting</h6>
+                                <p>Quality content.</p>
+                            </div>
+                        </div>
+                        <div class="mega-item"><i class="fas fa-magic"></i>
+                            <div>
+                                <h6>Niche Edits</h6>
+                                <p>Boost existing content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item"><a href="#">Tools</a></div>
+                <div class="nav-item"><a href="#">Company</a></div>
+                <div class="nav-item"><a href="#">Resources</a></div>
+                <a href="#" class="btn btn-outline">My Dashboard</a>
+                <a href="#" class="btn btn-orange">Sign Up</a>
+            </div>
         </div>
 
-        <!-- Main Content -->
-        <div class="content w-100">
-            <div class="header">
-                <div class="d-flex align-items-center">
-                    <button class="menu-toggle" onclick="toggleSidebar()">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <h5 class="mb-0 d-none d-md-block">Dashboard</h5>
-                </div>
-                <div class="dropdown">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                        id="profileDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle fs-4 me-2"></i>
-                        <strong>MD EMON HOWLADER</strong>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end text-small shadow" aria-labelledby="profileDropdown">
-                        <li><a class="dropdown-item" href="dashboard-profile-page.html">Profile</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="register.html">Logout</a></li>
-                    </ul>
+    </header>
+    <!-- Header End -->
+    <!-- Hero Section Start -->
+    <section class="hero-section">
+        <div class="meet-us-part">
+            <a href="#"> <i class="fa-solid fa-location-dot me-2"></i> Meet Us At brightonSEO San Diego! </a>
+        </div>
+        <h1 class="top-title-heading">First <span class="highlight-heading-title">AI-Driven</span> Guest Post & Link
+            Building
+            Platform</h1>
+        <p class="hero-section-paragraph">The future of link Building is here. Say goodbye to manual outreach. Reach
+            a Wider Audience and build
+            Authority with AI-suggested guest blogging on high-DA websites.
+
+        </p>
+        <h5 class="hero-looking-heading">Looking for the best link-building platform? Join Link Publishers today!
+        </h5>
+        <div class="btn-group-custom hero-section-big-btn">
+            <a href="#" class="btn btn-link-publisher-primary">Buy Guest Post</a>
+            <a href="#" class="btn btn-outline-link-publisher">Sell Guest Post</a>
+        </div>
+        <p class="text-muted small live-link-money-back"> <i class="fa-solid fa-square-check"></i> Live link or
+            money back/replacement guarantee</p>
+        <div style="margin: 1rem 0;">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle" width="40">
+            <img src="https://randomuser.me/api/portraits/women/47.jpg" class="rounded-circle" width="40">
+            <img src="https://randomuser.me/api/portraits/men/40.jpg" class="rounded-circle" width="40">
+            <span class="small">Loved by 6,000+ customers</span>
+        </div>
+        <p class="text-muted small mb-3">We are Integrated with</p>
+        <div class="trusted-by">
+            <img src="assets/images/front-ahrefs.webp" alt="ahrefs">
+            <img src="assets/images/front-semrush.webp" alt="semrush">
+            <img src="assets/images/front-moz.webp" alt="moz">
+            <img src="assets/images/front-google.webp" alt="google">
+        </div>
+
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Hero Banner Image section Start-->
+    <section class="hero-banner-image-section"> </section>
+    <!-- Hero Banner Image section End-->
+
+    <!-- Featured logo Section Start -->
+    <section id="featured-logo-section">
+        <div class="container">
+            <div class="section-title text-center">
+                <h2>Get Featured On</h2>
+            </div>
+        </div>
+        <div class="container-fluid py-2">
+            <div class="logo-slider-wrapper">
+                <div id="logoTrack" class="logo-track">
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/mashable-logo.png" class="logo-item" alt="Mashable" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/chicago-tribune-logo.png" class="logo-item"
+                            alt="Chicago Tribune" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/digital-journal-logo.png" class="logo-item"
+                            alt="Digital Journal" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/forbes-Iogo.png" class="logo-item" alt="Forbes" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/hubspot-logo.png" class="logo-item" alt="HubSpot" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/marketwatch-logo.png" class="logo-item" alt="MarketWatch" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/mn-logo.png" class="logo-item" alt="MN" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/msn-logo.webp" class="logo-item" alt="MSN" />
+                    </div>
+                    <div class="logo-item-wrapper">
+                        <img src="assets/images/features/yahoo-finance-logo.png" class="logo-item"
+                            alt="Yahoo Finance" />
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- Featured logo Section End -->
 
-            <div class="container-fluid mt-3 main-dashboard-home">
-                <div class="alert alert-success">
-                    Tax information needed - <a href="#" class="alert-link">Click here</a> to complete your profile to
-                    withdraw funds.
+    <!-- Achivement section Start -->
+    <section class="achievement-section py-5">
+        <div class="container">
+            <div class="row g-0 achievement-row">
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement border-right">
+                        <h3>114,521+</h3>
+                        <p>High-Quality Websites</p>
+                    </div>
                 </div>
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement border-right">
+                        <h3>21,311+</h3>
+                        <p>Verified Publishers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement border-right">
+                        <h3>9,644+</h3>
+                        <p>Worldwide Advertisers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="single-achievement">
+                        <h3>39,962+</h3>
+                        <p>Backlinks Built</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achivement section End -->
 
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="card-box bg-dashboard-info">
-                            <div>Total Websites</div>
-                            <div class="fs-2">0</div>
+    <!-- Wall of Love section Start -->
+    <section class="wall-of-love-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="section-title">
+                        <h5>Wall of Love</h5>
+                        <h2>What people are <br> saying</h2>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="wall-logo-images d-flex align-items-center justify-content-end gap-3">
+                        <img src="assets/images/wall-love/clutch.svg" width="50px" alt="">
+                        <img src="assets/images/wall-love/front-semrush-certified.svg" width="50px" alt="">
+                        <img src="assets/images/wall-love/tech-behemonth.svg" width="50px" alt="">
+                        <img src="assets/images/wall-love/users-love.svg" width="50px" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- body content -->
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- single-wall-love -->
+                    <div class="single-wall-love border">
+                        <p>"It's my first experience to buy guest posts and link insertion through a website. There are
+                            several things that I like working with LinkPublishers.com. The first one linkpublishers.com
+                            helps me to find many good websites with affordable prices. It's really helps my company
+                            when my company is struggling to bounce back due to Covid Pandemic."</p>
+                        <hr>
+                        <div class="wall-profile d-flex align-items-center gap-3">
+                            <img src="assets/images/wall-love/marilyn.webp" class="img-fluid" alt="">
+                            <h3>Marilyn</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card-box bg-dashboard-warning">
-                            <div>Total Orders</div>
-                            <div class="fs-2">0</div>
-                            <small>0 Completed Orders | 0 Pending Orders</small>
+                    <!-- single-wall-love -->
+                    <div class="single-wall-love border">
+                        <p>"It's my first experience to buy guest posts and link insertion through a website. There are
+                            several things that I like working with LinkPublishers.com. The first one linkpublishers.com
+                            helps me to find many good websites with affordable prices. It's really helps my company
+                            when my company is struggling to bounce back due to Covid Pandemic."</p>
+                        <hr>
+                        <div class="wall-profile d-flex align-items-center gap-3">
+                            <img src="assets/images/wall-love/marilyn.webp" class="img-fluid" alt="">
+                            <h3>Marilyn</h3>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card-box bg-dashboard-primary">
-                            <div>Total Sales</div>
-                            <div class="fs-2">$0</div>
-                            <small>$0 Amount Withdrawn</small>
+                </div>
+                <div class="col-md-4">
+                    <!-- Thumbnail 1 -->
+                    <div class="single-image-video position-relative">
+                        <img src="assets/images/wall-love/client-seven.webp" alt="Client 1"
+                            class="img-fluid video-thumbnail rounded-3">
+
+                        <div class="overlay-image-video d-flex justify-content-between align-items-end px-3 py-2">
+                            <span class="video-icon" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://www.youtube.com/embed/mgFkeh1sJ_E?si=efcUi8nKwPBseA6a">
+                                <i class="fas fa-play-circle"></i>
+                            </span>
+                            <h5 class="client-name mb-0">John Doe</h5>
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <div class="card-box bg-dashboard-success">
-                            <div>New Customers</div>
-                            <div class="fs-2">0</div>
-                            <small>Last 7 Days</small>
+
+                    <!-- YouTube Modal -->
+                    <!-- Video Modal (Used by all) -->
+                    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content bg-dark border-0">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="btn-close btn-close-white ms-auto"
+                                        data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body p-0">
+                                    <div class="ratio ratio-16x9">
+                                        <iframe id="youtubeVideo" src="" title="YouTube Video" allow="autoplay"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- single-wall-love -->
+                    <div class="single-wall-love border">
+                        <p>"It's my first experience to buy guest posts and link insertion through a website. There are
+                            several things that I like working with LinkPublishers.com. The first one linkpublishers.com
+                            helps me to find many good websites with affordable prices. It's really helps my company
+                            when my company is struggling to bounce back due to Covid Pandemic."</p>
+                        <hr>
+                        <div class="wall-profile d-flex align-items-center gap-3">
+                            <img src="assets/images/wall-love/marilyn.webp" class="img-fluid" alt="">
+                            <h3>Marilyn</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <!-- single-wall-love -->
+                    <div class="single-wall-love border">
+                        <p>"It's my first experience to buy guest posts and link insertion through a website. There are
+                            several things that I like working with LinkPublishers.com. The first one linkpublishers.com
+                            helps me to find many good websites with affordable prices. It's really helps my company
+                            when my company is struggling to bounce back due to Covid Pandemic."</p>
+                        <hr>
+                        <div class="wall-profile d-flex align-items-center gap-3">
+                            <img src="assets/images/wall-love/marilyn.webp" class="img-fluid" alt="">
+                            <h3>Marilyn</h3>
+                        </div>
+                    </div>
+                    <!-- Thumbnail 2 -->
+                    <div class="single-image-video position-relative mt-4">
+                        <img src="assets/images/wall-love/client-seven.webp" alt="Client 2"
+                            class="img-fluid video-thumbnail rounded-3">
+
+                        <div class="overlay-image-video d-flex justify-content-between align-items-end px-3 py-2">
+                            <span class="video-icon" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                data-video="https://www.youtube.com/embed/Ih2sMh0TwNQ?si=6XjVpaM0NcvhFGXi">
+                                <i class="fas fa-play-circle"></i>
+                            </span>
+                            <h5 class="client-name mb-0">Jane Smith</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-outline-link-publisher">View More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Wall of Love section End -->
+    <!-- Top featured section Start -->
+    <section class="featured-section">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="section-title">
+                <h5>Top Featured</h5>
+                <h2>July Featured Websites</h2>
+            </div>
+
+            <!-- Featured Table -->
+            <div class="table-responsive featured-table">
+                <table class="table align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th>Website</th>
+                            <th>DA</th>
+                            <th><img src="https://ahrefs.com/favicon.ico" alt="Ahrefs" width="20" title="Ahrefs" /></th>
+                            <th><img src="https://semrush.com/favicon.ico" alt="Semrush" width="20" title="Semrush" />
+                            </th>
+                            <th>Completion Ratio</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    <div class="site-name">teamgroupname.com</div>
+                                    <div class="site-category">Quotes</div>
+                                </div>
+                            </td>
+                            <td>58</td>
+                            <td>8.6K</td>
+                            <td>16.6K</td>
+                            <td>100.00%</td>
+                            <td><button class="btn btn-details">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <div class="site-name">nvhomeshow.com</div>
+                                    <div class="site-category">Home &amp; Garden +1</div>
+                                </div>
+                            </td>
+                            <td>36</td>
+                            <td>623</td>
+                            <td>451</td>
+                            <td>86.96%</td>
+                            <td><button class="btn btn-details">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <div class="site-name">visityourdreams.com</div>
+                                    <div class="site-category">Arts &amp; Entertainment +2</div>
+                                </div>
+                            </td>
+                            <td>32</td>
+                            <td>234</td>
+                            <td>117</td>
+                            <td>100.00%</td>
+                            <td><button class="btn btn-details">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <div class="site-name">networthsparks.com</div>
+                                    <div class="site-category">Automobiles +6</div>
+                                </div>
+                            </td>
+                            <td>41</td>
+                            <td>981</td>
+                            <td>2K</td>
+                            <td>100.00%</td>
+                            <td><button class="btn btn-details">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    <div class="site-name">feedbuzzard.net</div>
+                                    <div class="site-category">Business +3</div>
+                                </div>
+                            </td>
+                            <td>37</td>
+                            <td>3.5K</td>
+                            <td>489</td>
+                            <td>100.00%</td>
+                            <td><button class="btn btn-details">View Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center">
+                <button class="btn btn-load-more">Load More Websites</button>
+            </div>
+
+        </div>
+    </section>
+    <!-- Top featured section End -->
+    <!-- Why Us section Start -->
+    <section class="why-us-section">
+        <div class="container">
+            <div class="section-title">
+                <h5>Why Us?</h5>
+                <h2>Why to choose
+                    <br>
+                    Link Publishers?
+                </h2>
+            </div>
+            <!-- first row  -->
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="single-why-card">
+                        <div class="single-why-img">
+                            <img src="assets/images/why-us/front-controlled.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="single-why-content">
+                            <h3>100% Transparency</h3>
+                            <p>Keep your link building process transparent. Easily select your niche, target websites
+                                based on Domain Authority (DA), and manage your budget at every step.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- col 6 -->
+                <div class="col-md-6">
+                    <div class="singel-why-card-two">
+                        <div class="singel-why-card-two-img">
+                            <img src="assets/images/why-us/front-faster.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="single-why-card-two-content">
+                            <h3>Turnaround Time</h3>
+                            <p>Get your links delivered <br> within 30–32 hours</p>
+                        </div>
+                    </div>
+                    <!-- single card -->
+                    <div class="single-why-card">
+                        <div class="single-why-img text-center">
+                            <img src="assets/images/why-us/front-sites.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="single-why-content">
+                            <h3>Niche-Relevant Guest Posting Sites</h3>
+                            <p>The platform provides high traffic and high quality link building opportunities for 55+
+                                niche-relevant websites that are SEO-friendly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- second row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-why-card">
+                        <div class="single-why-img">
+                            <img src="assets/images/why-us/front-high.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="single-why-content">
+                            <h3>100% Transparency</h3>
+                            <p>Keep your link building process transparent. Easily select your niche, target websites
+                                based on Domain Authority (DA), and manage your budget at every step.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- card excellent -->
+                    <div class="excellent-customer">
+                        <div class="excellent-customer-text">
+                            <h3>Excellent Customer Support</h3>
+                        </div>
+                        <div class="excellent-customer-images">
+                            <img src="assets/images/why-us/great-two.png" class="img-fluid" alt="">
+                            <img src="assets/images/why-us/great-five.png" class="img-fluid" alt="">
+                            <img src="assets/images/why-us/great-six.png" class="img-fluid" alt="">
+                            <img src="assets/images/why-us/great-three.png" class="img-fluid" alt="">
+                            <img src="assets/images/why-us/great-two.png" class="img-fluid" alt="">
+                        </div>
+                    </div>
+                    <!-- singel-why-card-three -->
+                    <div class="singel-why-card-three">
+                        <div class="singel-why-card-three-img">
+                            <img src="assets/images/why-us/front-earn.svg" class="img-fluid" alt="">
+                        </div>
+                        <div class="singel-why-card-three-content">
+                            <h3>Earn High-Quality Backlinks</h3>
+                            <p>Boost your Google SERP rankings by earning high-quality backlinks from authoritative,
+                                high-traffic websites as part of your comprehensive link building efforts.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- Why Us section End -->
+    <!-- Services section Start -->
+    <section class="service-section">
+        <div class="container">
 
-    <!-- Bootstrap JS (with Popper) -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="section-title">
+                        <h5 class="serivice-section-title">Our Services</h5>
+                        <h2 class="service-main-heading">Are you in search of a complete solution for your digital
+                            product?
+                        </h2>
+                        <p class="service-subtext">Explore our range of services designed for a well-rounded strategy to
+                            boost
+                            your online
+                            presence.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+                                <div class="service-title">Guest Posting</div>
+                                <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <div class="service-icon"><i class="fas fa-link"></i></div>
+                                <div class="service-title">Link Building</div>
+                                <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                                <div class="service-title">Digital PR</div>
+                                <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="service-box">
+                                <div class="service-icon"><i class="fas fa-edit"></i></div>
+                                <div class="service-title">Niche Edits</div>
+                                <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Services section End -->
+    <!-- Unlock section Start -->
+    <section class="container my-5">
+        <div class="promo-section row align-items-center">
+            <!-- Left Text Content -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h2 class="promo-title">Unlock Your Content Potential with Link Publishers</h2>
+                <p class="promo-text mt-3">
+                    Elevate your online presence with Link Publishers. Explore quality guest posting, boost authority,
+                    and reach new audiences effortlessly.
+                </p>
+                <button class="promo-btn">Get Registered</button>
+            </div>
+
+            <!-- Right Icon Content -->
+            <div class="col-lg-6">
+                <div class="unlock-right-image">
+                    <img src="assets/images/front-unlock.svg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Unlock section End -->
+    <!-- Footer section Start -->
+    <footer>
+        <div class="container">
+            <div class="row">
+
+                <!-- Column 1: Logo & Description -->
+                <div class="col-lg-4 mb-4">
+                    <div class="d-flex align-items-center footer-logo">
+                        <a href="index-home.html">
+                            <img src="assets/images/link-logo.PNG" class="img-fluid" height="40px" alt="">
+                        </a>
+                    </div>
+                    <p class="footer-description">
+                        Drive high organic traffic to your websites with our link building services. Establish authority
+                        in your industry with relevant, original, and engaging link building. Stop missing out on
+                        high-converting leads – get started today!
+                    </p>
+
+                    <!-- Social Icons -->
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <h5 class="footer-title">Services</h5>
+                    <div class="footer-links">
+                        <a href="#">Link Building</a>
+                        <a href="#">Guest Posting</a>
+                        <a href="#">Digital PR</a>
+                        <a href="#">Niche Edit</a>
+                        <a href="#">SEO Reseller</a>
+                        <a href="#">Content Writing</a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <h5 class="footer-title">Company</h5>
+                    <div class="footer-links">
+                        <a href="#">About</a>
+                        <a href="#">Contact</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Life at Link Publishers</a>
+                        <a href="#">Write for Us</a>
+                    </div>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-md-4 col-lg-4 mb-4">
+                    <h5 class="footer-title">Get Update</h5>
+                    <form>
+                        <div class="position-relative mb-2">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control ps-5 subscribe-input"
+                                placeholder="Your email address">
+                        </div>
+                        <button type="submit" class="subscribe-btn">Get Started</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom d-flex flex-wrap justify-content-between align-items-center">
+                <div>©2025 Link Publishers All Rights Reserved.</div>
+                <div class="d-flex flex-wrap align-items-center">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Get Help</a>
+                    <a href="#" class="go-top">Go back top <i class="fas fa-arrow-up"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer section End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap JS -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-
     <!-- Font Awesome -->
     <script src="assets/js/all.min.js"></script>
 
+    <!-- Logo Slider JS -->
+    <script src="assets/js/logoSlider.js"></script>
+
+    <!-- counter js -->
+    <script src="assets/js/counter.js"></script>
+
+    <!-- popup video -->
+    <script src="assets/js/videoPopup.js"></script>
+
     <script>
-        function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("collapsed");
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+
+            // Close dropdowns on close
+            if (!menu.classList.contains('open')) {
+                document.querySelectorAll('.has-dropdown.open').forEach(item => item.classList.remove('open'));
+            }
+        }
+
+        function toggleDropdown(trigger) {
+            const parent = trigger.closest('.has-dropdown');
+
+            // Close other dropdowns
+            document.querySelectorAll('.has-dropdown').forEach(item => {
+                if (item !== parent) item.classList.remove('open');
+            });
+
+            parent.classList.toggle('open');
         }
     </script>
+    <!-- back to top -->
+    <script>
+        document.querySelector('.go-top').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <!-- sticky menu -->
+    <script src="assets/js/sticky-menu.js"></script>
+
+
+
+
+
+
+
+
 </body>
 
 </html>
