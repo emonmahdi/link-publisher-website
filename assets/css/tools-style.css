@@ -100,7 +100,7 @@ ul li {
   margin-bottom: 30px;
 }
 
-.tool-item a {
+/* .tool-item a {
   color: var(--web-secondary);
 }
 .tool-item {
@@ -110,7 +110,7 @@ ul li {
 .tool-item:hover {
   background-color: #f6f6f6;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
-}
+} */
 
 /* ---------------------------------------
 Tools Google Index Section Start

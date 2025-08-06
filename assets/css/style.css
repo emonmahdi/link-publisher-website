@@ -312,10 +312,22 @@ header {
   gap: 12px;
   align-items: flex-start;
 }
+.tool-item a {
+  color: var(--web-secondary);
+}
+.tool-item {
+  padding: 10px;
+  border-radius: 5px;
+}
+.tool-item:hover {
+  background-color: #f6f6f6;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
 
-.tool-icon {
+.tool-icon,
+i.company-icon {
   font-size: 1.4rem;
-  color: var(--web-primary, #ff5722);
+  color: var(--web-primary, #ff5722) !important;
   flex-shrink: 0;
   margin-top: 4px;
 }
@@ -454,9 +466,12 @@ header {
 }
 
 /* Icons inside the dropdown */
-.company-list a i {
+.company-list a .fa-users,
+.company-list a .fa-envelope,
+.company-list a .fa-heart,
+.company-list a .fa-calendar-alt {
   font-size: 1rem;
-  color: var(--web-primary); /* ✅ Enforce your primary color */
+  color: var(--web-primary) !important;
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -477,7 +492,9 @@ header {
   transition: transform 0.3s ease, color 0.3s ease;
   color: var(--web-primary); /* ✅ Color for arrow icon */
 }
-
+.calender-icon {
+  color: var(--web-primary) !important;
+}
 /* Rotate on hover */
 .resources-dropdown:hover .dropdown-arrow {
   transform: rotate(180deg);

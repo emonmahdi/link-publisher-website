@@ -17,6 +17,7 @@
 
     <link href="assets/css/service-style.css" rel="stylesheet">
     <link href="assets/css/tools-style.css" rel="stylesheet">
+    <link href="assets/css/company.css" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
@@ -175,7 +176,7 @@
                         <div class="dropdown-company-menu">
                             <ul class="company-list">
                                 <li>
-                                    <a href="#">
+                                    <a href="company-about.html">
                                         <i class="fas fa-users"></i>
                                         <span>About Us</span>
                                     </a>
@@ -194,7 +195,7 @@
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <i class="fas fa-calendar-alt"></i>
+                                        <i class="fas fa-calendar-alt calender-icon"></i>
                                         <span>Events</span>
                                     </a>
                                 </li>
@@ -281,292 +282,311 @@
     </header>
     <!-- Header End -->
     <main>
-        <!-- tools google index section start -->
-        <section class="tools-google-index-section">
+        <!-- About content body-->
+        <section class="about-banner-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-8">
-                        <div class="left-google-index-content">
-                            <h1 class="top-toole-title">Dofollow - Nofollow Link Checker</h1>
-                            <p>A Dofollow - Nofollow Link Checker by Link Publishers is a tool to identify and analyze
-                                dofollow links on a website or web page. Easily Check Dofollow and Nofollow Links for
-                                Better SEO and Link Building.</p>
-                        </div>
-                        <!-- form content -->
-                        <div class="google-url">
-                            <h6>Enter URL you would like to check</h6>
-
-                            <form id="indexCheckForm" novalidate="novalidate">
-                                <input type="hidden" name="_token" value="7JPhYNV8R4Lo7MzaiaPHa8SwszgUkolntZ9ORrKk">
-
-
-                                <div class="form-group col-12">
-                                    <label for="target_url">Enter a URL</label>
-                                    <input type="text" name="url" id="url" placeholder="https://example.com"
-                                        class="form-control">
-                                </div>
-                                <div class="form-group col-12">
-                                    <input type="text" name="recaptcha_status" id="recaptcha_status">
-                                    <div class="g-recaptcha" data-callback="verifyRecaptchaCallback"
-                                        data-expired-callback="expiredRecaptchaCallback"
-                                        data-sitekey="6LcDLfYpAAAAAEfFMfTbnr-EiXgqRTMImPGRfmVo">
-                                        <div style="width: 304px; height: 78px;">
-                                            <div><iframe title="reCAPTCHA" width="304" height="78" role="presentation"
-                                                    name="a-wj85gzojjll0" frameborder="0" scrolling="no"
-                                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                                                    src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcDLfYpAAAAAEfFMfTbnr-EiXgqRTMImPGRfmVo&amp;co=aHR0cHM6Ly9saW5rcHVibGlzaGVycy5jb206NDQz&amp;hl=en&amp;v=DBIsSQ0s2djD_akThoRUDeHa&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=wiuiiyll91it"></iframe>
-                                            </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                                                class="g-recaptcha-response"
-                                                style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                                        </div><iframe style="display: none;"></iframe>
-                                    </div>
-                                    <br>
-                                    <label id="recaptcha_status-error" class="error" for="recaptcha_status"
-                                        style=" margin: 0px;"></label>
-                                </div>
-                                <div id="preloader-wrap" class="loaded">
-                                    <div class="spinner spinner-8">
-                                        <div class="ms-circle1 ms-child"></div>
-                                        <div class="ms-circle2 ms-child"></div>
-                                        <div class="ms-circle3 ms-child"></div>
-                                        <div class="ms-circle4 ms-child"></div>
-                                        <div class="ms-circle5 ms-child"></div>
-                                        <div class="ms-circle6 ms-child"></div>
-                                        <div class="ms-circle7 ms-child"></div>
-                                        <div class="ms-circle8 ms-child"></div>
-                                        <div class="ms-circle9 ms-child"></div>
-                                        <div class="ms-circle10 ms-child"></div>
-                                        <div class="ms-circle11 ms-child"></div>
-                                        <div class="ms-circle12 ms-child"></div>
-                                    </div>
-                                </div>
-                                <button type="submit" id="submit" class="btn btn-link-publisher-primary">Check
-                                    Status</button>
-                            </form>
-                        </div>
-                        <!-- google table -->
-                        <div class="google-table" style="display:none">
-                            <h6>Results</h6>
-                            <div class="table-wrapper">
-                                <table class="table table-checker">
-                                    <thead>
-                                        <tr>
-                                            <th>URL</th>
-                                            <th>Result</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="google_index_result">
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- index content -->
-                        <div class="index-content">
-                            <h2>About Our Dofollow and Nofollow Link Checker</h2>
-                            <p>At Link Publishers – you will find a wide range of free tools to help you with guest
-                                posting, link building, and SEO.</p>
-                            <p>One of our latest offerings is the <b>Dofollow and Nofollow Link Checker</b> tool. As the
-                                name goes – it is a free tool that helps you check all the dofollow and nofollow links
-                                on a specific webpage or website.</p>
-                            <p>When you enter the URL of a webpage or website – it works by scanning the page and
-                                identifying and categorizing the external links as dofollow or nofollow.</p>
-                            <h2>What Is a Dofollow Link?</h2>
-                            <p>A dofollow link is a hyperlink that allows search engines to follow it and attribute
-                                value to the linked page. This value, often referred to as "link equity" or "link
-                                juice," helps improve the linked page's search engine ranking. Essentially, a dofollow
-                                link is a digital vote of confidence, signaling to search engines that the linked
-                                content is valuable and relevant.</p>
-                            <p>Because dofollow links can significantly boost a website's authority and visibility,
-                                acquiring them is a primary goal for many marketers. However, it's important to remember
-                                that while dofollow links are influential, they are just one of many factors that search
-                                engines consider when determining rankings.</p>
-                            <p>By default, all links are dofollow unless specifically marked otherwise (e.g., with the
-                                nofollow attribute).</p>
-                            <h2>What is a Nofollow Link?</h2>
-                            <p>A nofollow link is a hyperlink that instructs search engines not to pass link equity
-                                (ranking power) to the linked page. While originally intended to combat spam, Google now
-                                treats nofollow as a hint, meaning it might still consider some value from these links.
-                            </p>
-                            <p>Nofollow links are commonly found in comments, ads, sponsored content, and user-generated
-                                content. While they don't directly boost SEO like dofollow links, they can still drive
-                                traffic and enhance brand visibility.</p>
-                            <p>It's important to note that other link attributes like sponsored and ugc have been
-                                introduced to provide more specific information about the link's nature.</p>
-                            <p>While dofollow links remain highly coveted in SEO, many marketers also recognize the
-                                value of nofollow links in their overall strategy.</p>
-                            <h2>Why Should You Check DoFollow and NoFollow Links?</h2>
-                            <p>Checking both dofollow and nofollow links helps maintain a balanced and effective SEO
-                                strategy.</p>
-                            <h5>Balance SEO impact:</h5>
-                            <p>Make sure you have the right blend of nofollow and dofollow links for better search
-                                rankings.</p>
-                            <h5>Improve link building:</h5>
-                            <p>Helps you find valuable opportunities for adding dofollow links.</p>
-                            <h5>Avoid penalties:</h5>
-                            <p>Identify and correct any potentially harmful nofollow links.</p>
-                            <h5>Monitor competitors:</h5>
-                            <p>Analyze competitor links to improve your own SEO efforts.</p>
-                            <h2>How to Use This Dofollow and Nofollow Link Checker Tool?</h2>
-                            <p>Our tool is very user-friendly and designed for beginners. All you need to do is follow
-                                four simple steps to check dofollow and nofollow links.</p>
-                            <h5>Step 1: Open the tool</h5>
-                            <p>Go to the Link Publishers' Dofollow and Nofollow Link Checker tool.</p>
-                            <h5>Step 2: Enter URL</h5>
-                            <p>In the provided field - type or paste the URL of the webpage you want to check.</p>
-                            <h5>Step 3: Check status</h5>
-                            <p>Click the "Check Status" button to begin the analysis.</p>
-                            <img src="https://linkpublishers.com/assets/latest_assets/image/follow-step-one.png"
-                                alt="index-seo" loading="lazy" width="" height="">
-                            <h5>Step 4: View results</h5>
-                            <p>Wait a few seconds while the tool scans the page. It will display a list of all links -
-                                showing all the dofollow and nofollow links.</p>
-                            <p>Here’s how the results will look.</p>
-                            <img src="https://linkpublishers.com/assets/latest_assets/image/follow-step-two.png"
-                                alt="index-seo" loading="lazy" width="" height="">
-                            <img src="https://linkpublishers.com/assets/latest_assets/image/follow-step-three.png"
-                                alt="index-seo" loading="lazy" width="" height="">
-                            <h5>Note:</h5>
-                            <p>Review the results to understand your link profile. Use this information to improve your
-                                SEO and link-building efforts. And, based on the analysis, make necessary changes to
-                                optimize your link strategy.</p>
-                            <h2>What are the Benefits Dofollow and Nofollow Link Checker Tool</h2>
-                            <p>Our tool not only helps you analyze your backlink profile and link types, but you can
-                                also use it for many other things.</p>
-                            <h5>Verify link type:</h5>
-                            <p>Quickly see if your acquired links are dofollow or nofollow.</p>
-                            <h5>Optimize link building:</h5>
-                            <p>Make sure you have a good mix of dofollow links to boost your SEO.</p>
-                            <h5>Identify valuable links:</h5>
-                            <p>Find out which links pass SEO value and which don’t.</p>
-                            <h5>Improve strategy:</h5>
-                            <p>Adjust your link-building tactics based on the type and quality of links.</p>
-                            <h5>Track competitors:</h5>
-                            <p>Analyze competitors’ link profiles to refine your own strategy.</p>
-                            <h5>Free tool:</h5>
-                            <p>Enjoy full access to all features without any cost. There are no hidden fees.</p>
-                            <h5>Easy to use:</h5>
-                            <p>Our tool is very easy to use. With a simple and user-friendly interface - you can quickly
-                                get results.</p>
-                            <h2>FAQs</h2>
-                            <h5>What is the difference between dofollow and nofollow links?</h5>
-                            <p>Dofollow links boost SEO rankings - while nofollow links do not pass SEO value but can
-                                drive traffic.</p>
-                            <h5>How does a nofollow link look?</h5>
-                            <p>A nofollow link includes the rel="nofollow" attribute, telling search engines not to
-                                follow or pass SEO value.</p>
-                            <h5>How does a dofollow link look?</h5>
-                            <p>A dofollow link does not have special attributes and allows search engines to follow it.
-                            </p>
-                            <h5>Is this tool really free?</h5>
-                            <p>Yes, the tool is completely free to use with no hidden costs.</p>
-                            <h5>How accurate is the link analysis?</h5>
-                            <p>The tool is built on advanced AI algorithms and provides 100% accurate and reliable
-                                results.</p>
-                            <h5>Can I use this tool for multiple websites?</h5>
-                            <p>Yes, you can analyze links for any number of websites without restrictions.</p>
-                            <h5>Do I need to create an account to use this tool?</h5>
-                            <p>No, you can start using it directly without creating an account.</p>
-                            <h5>Do I need to install this tool?</h5>
-                            <p>No, it is a web-based tool, so there is no need for installation. You can use it directly
-                                from our website.</p>
+                    <div class="col-md-6">
+                        <div class="about-left-banner-title">
+                            <h1>The Ultimate Shortcut to Smarter, Stronger Link Building.</h1>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="toole-right-image">
-                            <img src="assets/images/tools/index-seo.png" class="img-fluid" alt="">
+                    <div class="col-md-6">
+                        <div class="about-right-banner-text">
+                            <p>Need high-value guest posts with backlinks? Link Publishers is a one-stop solution to
+                                buy, sell, and publish guest posts in just 32 hours. Our AI-driven marketplace directly
+                                connects advertisers and publishers to make the entire process – <b>quick, easy, and
+                                    affordable!</b></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- tools goolge index section end -->
-        <!-- tools service section start -->
-        <!-- Services section Start -->
-        <section class="service-section">
+        <!-- our story section -->
+        <section class="our-story-section">
             <div class="container">
-
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <div class="section-title">
-                            <h5 class="serivice-section-title">A list of our tools…</h5>
-                            <h2 class="service-main-heading">Ready to outrank your competitors? Try our SEO power tools.
-                            </h2>
-                            <p class="service-subtext">We offer a wide range of tools, including Dofollow / Nofollow
-                                Link Checker, Link Analyzer, Domain Age Checker, Backlink Status Checker, Broken Link
-                                Checker, and many more.</p>
+                <div class="our-story-detail">
+                    <h2>Our Story</h2>
+                    <p>Oh, the struggles of being an SEO professional - spending hours searching for the right websites
+                        to get quality backlinks! It is a slow, boring, and frustrating process, with no guarantee of
+                        results.
+                        Het Balar faced this same struggle in 2021. But instead of giving up, he asked a simple yet
+                        powerful question: “What if there was an easier way for advertisers and publishers to connect?”
+                        And that’s how <b>Link Publishers</b> came to life.</p>
+                </div>
+                <div class="our-story-marketplace">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="our-story-item">
+                                <h3>The Birth of Marketplace</h3>
+                                <p>Link Publishers was born from a simple yet powerful idea – <b>to make link building
+                                        easier</b>.</p>
+                                <p>Inspired by a vision to simplify the process, it became a platform where advertisers
+                                    and
+                                    publishers could connect quickly.</p>
+                                <p>What started as a solution for guest posting has grown into so much more. Today, Link
+                                    Publishers is a go-to hub for smarter link-building - helping of SEO professionals
+                                    secure
+                                    high-quality backlinks quickly and efficiently - all without the usual hassle.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="service-box">
-                                    <div class="service-icon"><i class="fas fa-file-alt"></i></div>
-                                    <div class="service-title">Guest Posting</div>
-                                    <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-box">
-                                    <div class="service-icon"><i class="fas fa-link"></i></div>
-                                    <div class="service-title">Link Building</div>
-                                    <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-box">
-                                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                                    <div class="service-title">Digital PR</div>
-                                    <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-box">
-                                    <div class="service-icon"><i class="fas fa-edit"></i></div>
-                                    <div class="service-title">Niche Edits</div>
-                                    <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="service-box comming-soon-box">
-                                    <div class="service-icon"><i class="fas fa-edit"></i></div>
-                                    <div class="service-title">Domain Authority Checker <span
-                                            class="tool-comming-soon">Coming Soon</span></div>
-                                    <div class="arrow-icon"><i class="fas fa-arrow-right"></i></div>
-                                </div>
+                        <div class="col-md-6">
+                            <div class="our-story-img">
+                                <img src="https://linkpublishers.com/assets/latest_assets/image/about-our-story.svg"
+                                    alt="about-our-story" loading="lazy" class="img-fluid">
                             </div>
                         </div>
                     </div>
-                </div>
 
+
+                </div>
+                <div class="story-link-publisher">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="our-story-item">
+                                <h3>How We Make Link Building Easier</h3>
+                                <p>Traditional link building can be a nightmare - manual outreach, endless research, and
+                                    weeks
+                                    of waiting. Link Publishers has completely changed this process by focusing on what
+                                    matters
+                                    most:</p>
+                                <ul>
+                                    <li><b>Faster Backlinks:</b> No more waiting forever. With Link Publishers, you can
+                                        secure
+                                        high-quality backlinks in just 32 hours.</li>
+                                    <li><b>Customized Strategies:</b> Need niche-specific backlinks or wider reach? We
+                                        create
+                                        plans that match your goals perfectly.</li>
+                                    <li><b>Simplified Connections:</b> Forget the complicated steps. Our platform
+                                        connects
+                                        advertisers and publishers instantly, saving you time and stress.</li>
+                                </ul>
+                                <p><b>"Securing quality guest posts with strong backlinks is now as simple and seamless
+                                        as
+                                        online shopping."</b></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="our-story-item story-link">
+                                <h3>What Makes Link Publishers Different?</h3>
+                                <p>What truly sets Link Publishers apart is our use of advanced AI technology. Our
+                                    platform is
+                                    powered by smart algorithms to connect the right advertisers and publishers in every
+                                    niche.
+                                </p>
+                                <p><b>The result = guest posts + backlinks that offer value</b></p>
+                                <p><b>Here is why brands and SEO experts trust us:</b></p>
+                                <ul>
+                                    <li><b>Effortless Connections:</b> We make sure advertisers and publishers connect
+                                        with ease
+                                        - guaranteeing effective collaborations.</li>
+                                    <li><b>Holistic Services:</b> Beyond link building - we offer custom strategies,
+                                        content
+                                        creation, and SEO reselling services to address every SEO need.</li>
+                                    <li><b>Innovative Approach:</b> We are always improving - using creative methods to
+                                        deliver
+                                        exceptional results that keep you ahead.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </section>
-        <!-- Services section End -->
-        <!-- tools service section end -->
-        <!-- Unlock section Start -->
-        <section class="container my-5">
-            <div class="promo-section row align-items-center">
-                <!-- Left Text Content -->
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="promo-title">Unlock Your Content Potential with Link Publishers</h2>
-                    <p class="promo-text mt-3">
-                        Elevate your online presence with Link Publishers. Explore quality guest posting, boost
-                        authority,
-                        and reach new audiences effortlessly.
-                    </p>
-                    <button class="promo-btn">Get Registered</button>
-                </div>
-
-                <!-- Right Icon Content -->
-                <div class="col-lg-6">
-                    <div class="unlock-right-image">
-                        <img src="assets/images/front-unlock.svg" class="img-fluid" alt="">
+        <!-- Achivement section Start -->
+        <section class="achievement-section py-5">
+            <div class="container">
+                <div class="row g-0 achievement-row">
+                    <div class="col-md-3 col-6">
+                        <div class="single-achievement border-right">
+                            <h3>21,350+</h3>
+                            <p>Publishers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="single-achievement border-right">
+                            <h3>9,674+</h3>
+                            <p>Advertisers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="single-achievement border-right">
+                            <h3>40,116+</h3>
+                            <p>Successful Orders</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="single-achievement">
+                            <h3>114,521+</h3>
+                            <p>Websites</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Unlock section End -->
+        <!-- Achivement section End -->
+        <!-- ready-posting section Start -->
+        <section class="ready-posting about-posting">
+            <div class="container">
+                <div class="posting-body text-center">
+                    <div class="single-posting-content">
+                        <h3>Ready to reap the benefits of link building?</h3>
+                        <p>Join us today and experience a smarter way to achieve your SEO goals.</p>
+                    </div>
+                    <div class="about-posting-btn">
+                        <div class="lets-get-start-btn text-end">
+                            <button class="btn btn-get-started">Talk to Our Experts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ready-posting section End -->
+        <section class="our-team-section">
+            <div class="container">
+                <h4>The Visionaries Behind the Link Building Revolution</h4>
+                <div class="our-founder">
+                    <div class="row gy-4">
+                        <!-- Founder & CEO -->
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex flex-column flex-sm-row align-items-center gap-3 h-100">
+                                <div class="founder-detail text-center text-sm-start">
+                                    <h3>Het Balar</h3>
+                                    <h6>Founder &amp; CEO</h6>
+                                    <a href="https://www.linkedin.com/in/het-balar/" target="_blank">
+                                        <img src="https://linkpublishers.com/assets/latest_assets/image/about-linkedin.svg"
+                                            alt="about-linkedin" loading="lazy" width="32" height="32">
+                                    </a>
+                                    <img style="transform: rotate(180deg);"
+                                        src="https://linkpublishers.com/assets/latest_assets/image/about-right.svg"
+                                        alt="about-right" loading="lazy" width="36" height="16">
+                                </div>
+                                <div class="text-center">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-het-sir.svg"
+                                        alt="Het Balar - CEO and Founder" class="img-fluid" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Co-Founder -->
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex flex-column flex-sm-row align-items-center gap-3 h-100">
+                                <div class="text-center">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-harshal-sir.svg"
+                                        alt="Harshal Shah - Co- Founder" class="img-fluid" loading="lazy" />
+                                </div>
+                                <div class="founder-detail our-co-founder text-center text-sm-start">
+                                    <h3>Harshal Shah</h3>
+                                    <h6>Co- Founder</h6>
+                                    <a href="https://www.linkedin.com/in/harshalelsner/" target="_blank">
+                                        <img src="https://linkpublishers.com/assets/latest_assets/image/about-linkedin.svg"
+                                            alt="about-linkedin" loading="lazy" width="32" height="32">
+                                    </a>
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-right.svg"
+                                        alt="about-right" class="left-arrow-icon" loading="lazy" width="36" height="16">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3>Fueled by caffeine &amp; driven by deadlines, this team delivers results.</h3>
+                <div class="our-team">
+                    <div class="row">
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/amish-keshwani.webp"
+                                        alt="Amish Keshwani - Advisory Board Member - Digital Marketing" loading="lazy"
+                                        class="img-fluid" />
+                                </div>
+                                <h5>Amish Keshwani</h5>
+                                <p>Advisory Board Member - Digital Marketing</p>
+                            </div>
+                        </div>
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-kevin.webp"
+                                        alt="Kevin Ajudia - Account Manager" loading="lazy" class="img-fluid" />
+                                </div>
+                                <h5>Kevin Ajudia</h5>
+                                <p>Account Manager</p>
+                            </div>
+                        </div>
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-vishakha-balar.webp"
+                                        alt="Vishakha Balar - Account Manager" loading="lazy" class="img-fluid" />
+                                </div>
+                                <h5>Vishakha Balar</h5>
+                                <p>Account Manager</p>
+                            </div>
+                        </div>
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-parul-sharma.webp"
+                                        alt="Parul Sharma - Account Manager" loading="lazy" class="img-fluid" />
+                                </div>
+                                <h5>Parul Sharma</h5>
+                                <p>Account Manager</p>
+                            </div>
+                        </div>
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-nupur-sharma.webp"
+                                        alt="Nupur Sharma - Outreach Manager" loading="lazy" class="img-fluid" />
+                                </div>
+                                <h5>Nupur Sharma</h5>
+                                <p>Outreach Manager</p>
+                            </div>
+                        </div>
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-aansi-gosaliya.webp"
+                                        alt="Aashi Gosaliya - Outreach Manager" loading="lazy" class="img-fluid" />
+                                </div>
+                                <h5>Aashi Gosaliya</h5>
+                                <p>Outreach Manager</p>
+                            </div>
+                        </div>
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-dharti-patel.webp"
+                                        alt="Dharti Patel - Sr. Software Developer" loading="lazy" class="img-fluid" />
+                                </div>
+                                <h5>Dharti Patel</h5>
+                                <p>Sr. Software Developer</p>
+                            </div>
+                        </div>
+                        <!-- single team member -->
+                        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="our-team-member">
+                                <div class="our-team-img">
+                                    <img src="https://linkpublishers.com/assets/latest_assets/image/about-vairag-bhuriya.webp"
+                                        alt="Vairag Bhuriya - QA Engineer" loading="lazy" width="260" height="320">
+                                </div>
+                                <h5>Vairag Bhuriya</h5>
+                                <p>QA Engineer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
     </main>
