@@ -98,6 +98,9 @@ ul li {
   color: var(--text-para);
   margin-bottom: 30px;
 }
+.blog-submenu-icon {
+  color: #f2652d;
+}
 /* ===============================
    Header Styles
    =============================== */
